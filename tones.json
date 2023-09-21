@@ -1,0 +1,41 @@
+{  
+  "tonesList": [
+    {"code": "Default", "name": "Default"},
+    {"code": "Angry", "name": "Angry"},
+    {"code": "Assertive", "name": "Assertive"},
+    {"code": "Authoritative", "name": "Authoritative"},
+    {"code": "Clinical", "name": "Clinical"},
+    {"code": "Cold", "name": "Cold"},
+    {"code": "Concise", "name": "Concise"},
+    {"code": "Confident", "name": "Confident"},
+    {"code": "Cooperative", "name": "Cooperative"},
+    {"code": "Curious", "name": "Curious"},
+    {"code": "Cynical", "name": "Cynical"},
+    {"code": "Emotional", "name": "Emotional"},
+    {"code": "Empathetic", "name": "Empathetic"},
+    {"code": "Encouraging", "name": "Encouraging"},
+    {"code": "Enthusiastic", "name": "Enthusiastic"},
+    {"code": "Excited", "name": "Excited"},
+    {"code": "Formal", "name": "Formal"},
+    {"code": "Friendly", "name": "Friendly"},
+    {"code": "Funny", "name": "Funny"},
+    {"code": "Humorous", "name": "Humorous"},
+    {"code": "Informal", "name": "Informal"},
+    {"code": "Ironic", "name": "Ironic"},
+    {"code": "Joyful", "name": "Joyful"},
+    {"code": "Optimistic", "name": "Optimistic"},
+    {"code": "Pessimistic", "name": "Pessimistic"},
+    {"code": "Playful", "name": "Playful"},
+    {"code": "Professional", "name": "Professional"},
+    {"code": "Sad", "name": "Sad"},
+    {"code": "Sarcastic", "name": "Sarcastic"},
+    {"code": "Serious", "name": "Serious"},
+    {"code": "Surprised", "name": "Surprised"},
+    {"code": "Sympathetic", "name": "Sympathetic"},
+    {"code": "Tentative", "name": "Tentative"},
+    {"code": "Warm", "name": "Warm"},
+    {"code": "Worried", "name": "Worried"}
+]
+}
+    
+    

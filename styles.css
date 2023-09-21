@@ -1,0 +1,246 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select, input, textarea, button {
+  border-radius: 10px;
+}
+
+#context, #text {
+  height: 100px;
+  box-sizing: border-box;
+}
+
+#copy {
+  margin-top: 10px;
+}
+
+#deleteVariables {
+  margin-left: 10px;
+  display: block;
+}
+
+.deleteButton {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+#output {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  white-space: pre-wrap;
+  border-radius: 10px;
+}
+
+textarea {
+  font-family: Arial, sans-serif;
+  display: block;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px;
+  resize: vertical;
+}
+
+.hidden {
+  display: none;
+}
+
+#variableContainer {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#variableValueCont {
+  margin-left: 10px;
+}
+
+.variableValue {
+  width: 31vw;
+}
+.variableName {
+  width: 105px;
+}
+
+#parametersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#temperatureContainer, #topPContainer, #frequencyPenaltyContainer, #presencePenaltyContainer {
+  align-items: center;
+  margin-left: 10px;
+  flex-wrap: wrap;
+}
+
+#topKContainer, #maxTokensContainer {
+  display: flex;
+  margin-left: 10px;
+}
+
+#topKContainer {
+  margin-right: 70px;
+}
+
+#topK, #maxTokens {
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 20px;
+  width: 10vw;
+}
+
+#modelOption, #languageOption, #roleOption, #writingStyle, #toneOption, #sentimentOption, #audienceContainer, #formatOption, #taskContainer {
+  display: flex;
+  grid-template-columns: 1fr 2fr; /* Define dos columnas, la primera 1fr y la segunda 2fr */
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+#model, #langOption, #roleOpt, #writingStyleOpt, #toneOpt, #sentiment, #audience, #formatOpt, #taskOption {
+  margin-left: 5px;
+  width: 35vw; /* Esto hará que el ancho sea el 100% del contenedor padre */
+}
+
+input[type="range"] {
+  width: 45vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
+  /* Aquí puedes añadir más estilos específicos para los input de tipo "range" */
+}
+
+#deletePrompt {
+    position: relative;
+    left: 44%;
+    transform: translateX(-41%);
+    margin-top: 10px;
+}
+
+.toggleButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+@media (hover: hover){
+    
+.toggleButton:hover {
+  color: #4ECCC5; /* Cambia el color al pasar el mouse por encima o al tocar en dispositivos móviles */
+}
+}
+
+.textDefinition {
+  margin-top: -20px;
+}
+
+/*Estilos para botones de Add Variables*/
+.seleccionado {
+  background-color: #ccc;
+}
+
+.dropdown-content {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  left: 95%;
+  transform: translateX(-80%);
+}
+
+.dropdown-content {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#twoColumn{
+  column-count:2;
+  column-gap: 20px;
+}
+
+#hiperparameter {
+  break-inside: avoid-column;
+  display: inline-block;
+}
+
+#variables {
+  break-inside: avoid-column;
+}
+
+@media screen and (max-width: 768px) {
+  #twoColumn {
+    column-count: 1; /* Cambiar a una sola columna en pantallas más pequeñas */
+  }
+  input[type="range"] {
+    width: 85vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
+    /* Aquí puedes añadir más estilos específicos para los input de tipo "range" */
+  }
+  #model, #langOption, #roleOpt, #writingStyleOpt, #toneOpt, #sentiment, #audience, #formatOpt, #taskOption {
+    width: 58vw; /* Esto hará que el ancho sea el 70% del contenedor padre */
+  }
+  #topK, #maxTokens {
+    width: 40vw;
+  }
+}
+
+/*CSS de popups */
+
+.popupHidden {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 8px 16px!important;
+  z-index: 9999;
+  max-width: 40%;
+}
+
+.popBox {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.popText {
+  display: block;
+  margin-top: 5px;
+  font-weight: 400!important;
+  font-size: 12px!important;
+  line-height: 20px!important;
+  text-align: left!important
+}

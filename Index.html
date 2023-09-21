@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptEase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V5DE1JRVTF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V5DE1JRVTF');
+</script>
+<body>
+    <h1>ChatGPT Prompt Generator</h1>
+    <h5>This ChatGPT Prompt Generation Tool is designed to help prompt engineering, 
+        this platform empowers users to effortlessly configure parameters for ChatGPT. 
+        Whether you're a seasoned developer or just starting out, our user-friendly 
+        interface makes the process seamless. Craft prompts tailored to your specific 
+        needs and unlock the full potential of ChatGPT. Say goodbye to manual tweaking 
+        and hello to a more efficient, productive workflow. Let's embark on this journey 
+        of enhanced AI interaction together!
+    </h5>
+    <main>
+    <diV id="twoColumn">
+    <div id="variables">
+    <label for="variableContainer">Variables</label>
+    <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
+                <div class="textDefinition" style="display: none;">
+                    <p>Variables are used to reserve memory spaces in a concise {manner}, holding the information we intend to utilize in our output prompt or as a reference. It's possible to define multiple variables.<br>
+                        For instance:<br>
+                        Variable: S = "Rising Sun"<br>
+                        Input: Compose a poem about {R} where it is mentioned exactly 10 times.<br>
+                        You can add as much variables you, but the model could hallucinate. 
+                    </p>
+                </div>
+    <div id="variableContainer">
+        <div id="variableNameCont">
+            <label for="variableName">Variable Name:</label>
+            <input type="text" class="variableName" placeholder="Insert a name" id="variableName_0">
+        </div>
+        <div id="variableValueCont">
+            <label for="variableValue">Variable Value:</label>
+            <input type="text" class="variableValue" placeholder="Insert a value" id="variableValue_0">
+        </div>
+        <div id="deleteVariables">
+            <label for="deleteVariables">I/D</label>
+            <button type="button" class="deleteButton" id="deleteButton" onclick="agregarElemento()">+</button>
+        </div>
+    </div>
+    <div id="taskContainer">
+        <label class="labelWithPopup" for="task">Task:</label>
+        <div class="popupHidden">
+            <h6 class="popBox">Task</h6>
+            <span class="popText">
+                We have defined some tasks that you can use as
+                a model and replace the data with your own data, experiment! 
+            </span>
+        </div>
+        <select id="taskOption">
+    </select>
+    </div>
+             <label for="context">Context:</label>
+             <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
+                <div class="textDefinition" style="display: none;">
+                    <p>The context provides the model with the initial information to start its task or 
+                        to know the purpose and scope of what we are going to ask for in the input, is not always necessary.<br>
+                        Example: You want to Summarize a text - In the context you enter the text you are 
+                        going to work on. - In the input: Enter the specifications about the summary to be requested.</p>
+                </div>
+             <textarea id="context" placeholder="Describe the context or enter information for ChatGPT better picture"></textarea>
+             <div id="charWordCountContext">0 chars / 0 words / 0 est. tokens</div>
+             <div class="dropdown">
+                <button onclick="agregarElementos('context')">Add Varibles</button>
+                <ul class="dropdown-content" id="menuDesplegable" tabindex="0" onkeydown="navegarMenu(event)">
+                </ul>
+            </div>            
+             <label for="text">Input:</label>
+             <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
+                <div class="textDefinition" style="display: none;">
+                    <p>It is the heart of the prompt, in this part we request the specific and necessary task to ChatGPR.<br>
+                       Example: Summarize Text - In the Imput we write: "Summarize the text separating the topics by titles and 
+                       highlighting the main concepts of the following text:" <br>(when using context always end the sentence with "the following text:".
+                       The Prompt takes care of the formatting for ChaGPT to understand it).</p>
+                </div>
+            <textarea id="text" placeholder="Enter your request for ChatGPT"></textarea>
+            <div id="charWordCountText">0 chars / 0 words / 0 est. tokens</div>
+            <div class="dropdown">
+                <button onclick="agregarElementos('text')">Add Variables</button>
+                <ul class="dropdown-content" id="menuDesplegableText" tabindex="0" onkeydown="navegarMenu(event)">
+                </ul>
+            </div>
+    </div>
+    <div id="hiperparameter">     
+        <label for="parameters">Hiperparameters/ Parameters:</label>
+        <button class="toggleButton" onclick="moreInfo(this)">+ Definitions </button>
+        <div class="textDefinition" style="display: none;">
+            <p>ACA</p>
+        </div>
+    <div id="parametersContainer">
+        <div id="modelOption">
+        <label class="labelWithPopup" for="model">Model:</label>
+        <div class="popupHidden">
+            <h6 class="popBox">Model</h6>
+            <span class="popText">
+                Refer to different iterations or releases of the ChatGPT model. Each version 
+                is a specific variation or improvement of the model, typically distinguished 
+                by factors like training data, architecture, and performance capabilities. 
+            </span>
+        </div>
+        <select id="model">
+            <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+            <option value="text-babbage-001">text-babbage-001</option>
+            <option value="text-ada-001">text-ada-001</option>
+            <option value="gpt-3.5-turbo-0301">gpt-3.5-turbo-0301</option>
+            <option value="davinci-002">davinci-002</option>
+            <option value="gpt-3.5-turbo-0613">gpt-3.5-turbo-0613</option>
+            <option value="text-curie-001">text-curie-001</option>
+            <option value="code-cushman-001">code-cushman-001</option>
+        </select>
+        </div>
+        <div id="languageOption">
+            <label class="labelWithPopup" for="language">Language:</label>
+            <div class="popupHidden">
+                <h6 class="popBox">Language</h6>
+                <span class="popText">
+                    Records indicate that ChatGPT can translate to more than 95 languages. 
+                    Just enter the imput and select the language, to indicate at the prompt 
+                    which language ChatGPT should deliver the response.
+                </span>
+            </div>
+            <select id="langOption">
+        </select>
+        </div>
+        <div id="roleOption">
+            <label class="labelWithPopup" for="role">Role:</label>
+            <div class="popupHidden">
+                <h6 class="popBox">Role</h6>
+                <span class="popText">
+                    LLMs are models that can be positioned in a certain role 
+                    to deliver more accurate answers, such as Technology advisor 
+                    or Copywriter. You will find many predefined ones to help you 
+                    in your task, if you don't find it then you can edit it in your prompt. 
+                    First understand the structure of how they work and create your own.
+                </span>
+            </div>
+            <select id="roleOpt">
+        </select>
+        </div>
+        <div id="writingStyle">
+            <label class="labelWithPopup" for="style">Writing Style:</label>
+            <div class="popupHidden">
+                <h6 class="popBox">Writing Style</h6>
+                <span class="popText">
+                    You can tell ChatGPT the style of writing you want in your 
+                    response and it can be as varied as academic or thriller. 
+                    Play with the styles and have fun.
+                </span>
+            </div>
+            <select id="writingStyleOpt">
+        </select>
+        </div>
+        <div id="toneOption">
+            <label class="labelWithPopup" for="tone">Tone:</label>
+            <div class="popupHidden">
+                <h6 class="popBox">Tone</h6>
+                <span class="popText">
+                    Define the tone of the response text that ChatGPT will 
+                    give you. It can be as varied as: funny or sarcastic, play 
+                    around with them, mixing different parameters.
+                </span>
+            </div>
+            <select id="toneOpt">
+        </select>
+        </div>
+        <div id="sentimentOption">
+            <label class="labelWithPopup" for="sentiment">Sentiment:</label>
+            <div class="popupHidden">
+                <h6 class="popBox">Sentiment</h6>
+                <span class="popText">
+                    You can define the sentiment with which you want ChatGPT to write. 
+                    This Hyperparameter can also be used in the Input, to analyze reviews, 
+                    posts, emails, etc. Search in the Task option "Rate Reviews".
+                </span>
+            </div>
+            <select id="sentiment">
+                <option value="Default">Default</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Positive">Positive</option>
+                <option value="Negative">Negative</option>
+            </select>
+        </div>
+        <div id="formatOption">
+            <label class="labelWithPopup" for="format">Format:</label>
+            <div class="popupHidden">
+                Explicación detallada para etiqueta 1.
+            </div>
+            <select id="formatOpt">
+        </select>
+        </div>
+        <div id="audienceContainer">
+            <label class="labelWithPopup" for="audience">Audience:</label>
+            <div class="popupHidden">
+                Explicación detallada para etiqueta 1.
+            </div>
+            <textarea id="audience" placeholder="E.g.:5 years old children, engineering students, medical conference, etc"></textarea>
+        </div>
+        <div id="temperatureContainer">
+            <label class="labelWithPopup" for="temperature">Temperature:&nbsp;<output id="temperatureOutput"></output></label>
+            <div class="popupHidden">
+                Explicación detallada para etiqueta 1.
+            </div>
+            <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.0">
+        </div>
+        <div id="topPContainer">
+            <label class="labelWithPopup" for="topP">Top P:&nbsp;<output id="topPOutput"></output></label>
+            <div class="popupHidden">
+                Explicación detallada para etiqueta 1.
+            </div>
+            <input type="range" id="topP" min="0" max="1" step="0.01" value="0.00">
+        </div>        
+        <div id="topKContainer">
+            <label class="labelWithPopup" for="topK">Top K:</label>
+            <div class="popupHidden">
+                Explicación detallada para etiqueta 1.
+            </div>
+            <input type="number" id="topK" placeholder="Top K" min="0" max="10000" step="1" value="0">
+        </div>
+        <div id="maxTokensContainer">
+            <label class="labelWithPopup" for="maxTokens">Max Tokens:</label>
+            <div class="popupHidden">
+                Explicación detallada para etiqueta 1.
+            </div>
+            <input type="number" id="maxTokens" placeholder="Max Tokens" min="0" max="1000" step="1" value="0">
+        </div>
+        <div id="frequencyPenaltyContainer">
+            <label class="labelWithPopup" for="frequencyPenalty">Frequency Penalty:&nbsp;<output id="frequencyPenaltyOutput"></output></label>
+            <div class="popupHidden">
+                Explicación detallada para etiqueta 1.
+            </div>
+            <input type="range" id="frequencyPenalty" min="-2" max="2" step="0.1" value="0.0">
+        </div>
+        <div id="presencePenaltyContainer">
+            <label class="labelWithPopup" for="presencePenalty">Presence Penalty:&nbsp;<output id="presencePenaltyOutput"></output></label>
+            <div class="popupHidden">
+                Explicación detallada para etiqueta 1.
+            </div>
+            <input type="range" id="presencePenalty" min="-2" max="2" step="0.1" value="0.0">
+        </div>
+    </div>
+    </div>
+    </diV>
+    <div id="prompt">
+        <label for="promptContaines">Prompt Result</label>
+        <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
+                <div class="textDefinition" style="display: none;">
+                    <p>Variables can be used to store in memory spaces in a short 
+                    </p>
+                </div>
+                <br>
+        <button id="generate">Generate Prompt</button>
+        <button id="deletePrompt">Delete Prompt</button>
+        <div id="output"></div>
+        <div id="charWordCount"></div>
+        <button id="copy" disabled>Copy Prompt</button><br>
+    </div>
+    <script src="script.js"></script>
+    </main>
+</body>
+</html>
+
