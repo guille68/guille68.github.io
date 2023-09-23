@@ -17,25 +17,27 @@
 </script>
 <body>
     <h1>ChatGPT Prompt Generator</h1>
-    <h5>This ChatGPT Prompt Generation Tool is designed to help prompt engineering, 
-        this platform empowers users to effortlessly configure parameters for ChatGPT. 
-        Whether you're a seasoned developer or just starting out, our user-friendly 
-        interface makes the process seamless. Craft prompts tailored to your specific 
-        needs and unlock the full potential of ChatGPT. Say goodbye to manual tweaking 
-        and hello to a more efficient, productive workflow. Let's embark on this journey 
-        of enhanced AI interaction together!
+    <h5>
+        This ChatGPT prompt generation tool is designed to assist in prompt engineering, 
+        this platform allows users to effortlessly configure the parameters for ChatGPT. 
+        Whether you are an experienced developer or just starting out, our easy-to-use interface makes the process seamless. 
+        Our easy-to-use interface makes the process seamless. Say goodbye to manual settings 
+        and welcome a more efficient and productive workflow. Let's embark on this AI-enhanced 
+        of AI-enhanced interaction.<br>
+        IMPORTANT: We do not view or store any of your inputs information or your selections, use it freely!
     </h5>
     <main>
     <diV id="twoColumn">
     <div id="variables">
-    <label for="variableContainer">Variables</label>
+    <label for="variableContainer"><h3>Variables</h3></label>
     <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
                 <div class="textDefinition" style="display: none;">
                     <p>Variables are used to reserve memory spaces in a concise {manner}, holding the information we intend to utilize in our output prompt or as a reference. It's possible to define multiple variables.<br>
                         For instance:<br>
-                        Variable: S = "Rising Sun"<br>
+                        Variable Name: S<br>
+                        Variable Value: Rising Sun<br>
                         Input: Compose a poem about {R} where it is mentioned exactly 10 times.<br>
-                        You can add as much variables you, but the model could hallucinate. 
+                        You can add as many variables as you want, but the model could hallucinate. 
                     </p>
                 </div>
     <div id="variableContainer">
@@ -48,7 +50,7 @@
             <input type="text" class="variableValue" placeholder="Insert a value" id="variableValue_0">
         </div>
         <div id="deleteVariables">
-            <label for="deleteVariables">I/D</label>
+            <label for="deleteVariables">I/D:</label>
             <button type="button" class="deleteButton" id="deleteButton" onclick="agregarElemento()">+</button>
         </div>
     </div>
@@ -75,7 +77,7 @@
              <textarea id="context" placeholder="Describe the context or enter information for ChatGPT better picture"></textarea>
              <div id="charWordCountContext">0 chars / 0 words / 0 est. tokens</div>
              <div class="dropdown">
-                <button onclick="agregarElementos('context')">Add Varibles</button>
+                <button class= "buttonGreen" onclick="agregarElementos('context')">Add Varibles</button>
                 <ul class="dropdown-content" id="menuDesplegable" tabindex="0" onkeydown="navegarMenu(event)">
                 </ul>
             </div>            
@@ -83,23 +85,27 @@
              <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
                 <div class="textDefinition" style="display: none;">
                     <p>It is the heart of the prompt, in this part we request the specific and necessary task to ChatGPR.<br>
-                       Example: Summarize Text - In the Imput we write: "Summarize the text separating the topics by titles and 
-                       highlighting the main concepts of the following text:" <br>(when using context always end the sentence with "the following text:".
-                       The Prompt takes care of the formatting for ChaGPT to understand it).</p>
+                       Example: To summarize text, in the input text we would write: "Summarize the text separating the topics by titles and 
+                       highlighting the main concepts of the Text:"<br>(when using context always refer to "the text" and end the imput with "Text:" 
+                       for a better interpretation of the model.)<br>
+                       In the output of the prompt you will see some formats like: f, """", etc. so that ChtaGPT interprets it better, we recommend not to alter them.</p>
                 </div>
             <textarea id="text" placeholder="Enter your request for ChatGPT"></textarea>
             <div id="charWordCountText">0 chars / 0 words / 0 est. tokens</div>
             <div class="dropdown">
-                <button onclick="agregarElementos('text')">Add Variables</button>
+                <button class= "buttonGreen" onclick="agregarElementos('text')">Add Variables</button>
                 <ul class="dropdown-content" id="menuDesplegableText" tabindex="0" onkeydown="navegarMenu(event)">
                 </ul>
             </div>
     </div>
     <div id="hiperparameter">     
-        <label for="parameters">Hiperparameters/ Parameters:</label>
+        <label for="parameters"><h3>Hiperparameters/ Parameters:</h3></label>
         <button class="toggleButton" onclick="moreInfo(this)">+ Definitions </button>
         <div class="textDefinition" style="display: none;">
-            <p>ACA</p>
+            <p>Hyperparameters are settings or configurations used to control the training process itself, rather than the learned 
+               relationships within the model. They are set prior to training and are not learned from the data (temperature, Top K, Etc.).<br>
+               Parameters are the internal variables that the model learns during training. They define the relationships between 
+               the input data and the predicted output. These values are specific to the particular dataset and task the model was trained on (Role, Tone, Etc.).</p>
         </div>
     <div id="parametersContainer">
         <div id="modelOption">
@@ -184,7 +190,7 @@
                 <span class="popText">
                     You can define the sentiment with which you want ChatGPT to write. 
                     This Hyperparameter can also be used in the Input, to analyze reviews, 
-                    posts, emails, etc. Search in the Task option "Rate Reviews".
+                    posts, emails, etc. Search in the Task option "Review Classification".
                 </span>
             </div>
             <select id="sentiment">
@@ -197,7 +203,14 @@
         <div id="formatOption">
             <label class="labelWithPopup" for="format">Format:</label>
             <div class="popupHidden">
-                Explicación detallada para etiqueta 1.
+                <h6 class="popBox">Format</h6>
+                <span class="popText">
+                    It is important that we define the output format in which 
+                    we want ChatGPT to deliver the content, this can save us 
+                    work and processing time. The model contemplates many formats, 
+                    try them. By default it will deliver a format according to the 
+                    interpretation it makes.
+                </span>
             </div>
             <select id="formatOpt">
         </select>
@@ -205,49 +218,89 @@
         <div id="audienceContainer">
             <label class="labelWithPopup" for="audience">Audience:</label>
             <div class="popupHidden">
-                Explicación detallada para etiqueta 1.
+                <h6 class="popBox">Audience</h6>
+                <span class="popText">
+                    One of the guidelines is to be specific, by defining the audience 
+                    the model selects the mode, difficulty and language used in the response. 
+                    Place your target audience for the model's response. Blank will use medium 
+                    complexity and language.
+                </span>
             </div>
             <textarea id="audience" placeholder="E.g.:5 years old children, engineering students, medical conference, etc"></textarea>
         </div>
         <div id="temperatureContainer">
             <label class="labelWithPopup" for="temperature">Temperature:&nbsp;<output id="temperatureOutput"></output></label>
             <div class="popupHidden">
-                Explicación detallada para etiqueta 1.
+                <h6 class="popBox">Temperature</h6>
+                <span class="popText">
+                    Is like a knob that controls how random or focused the generated text is.
+                    High temperature (e.g., 0.8) makes the output more creative and unpredictable.
+                    Low temperature (e.g., 0.2) makes the output more focused and deterministic.
+                    Adjusting temperature helps strike a balance between creativity and sticking to a specific pattern.
+                </span>
             </div>
             <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.0">
         </div>
         <div id="topPContainer">
             <label class="labelWithPopup" for="topP">Top P:&nbsp;<output id="topPOutput"></output></label>
             <div class="popupHidden">
-                Explicación detallada para etiqueta 1.
+                <h6 class="popBox">Top P</h6>
+                <span class="popText">
+                    Narrows word choices based on probability, it limits the selection of words to the most probable ones. For example, if you set Top P to 0.8, the model will consider words that make up 80% of the total probability mass.
+                    Temperature adjusts how evenly distributed these probabilities are, influencing randomness. Both control text generation, but in different ways.
+                </span>
             </div>
             <input type="range" id="topP" min="0" max="1" step="0.01" value="0.00">
         </div>        
         <div id="topKContainer">
             <label class="labelWithPopup" for="topK">Top K:</label>
             <div class="popupHidden">
-                Explicación detallada para etiqueta 1.
+                <h6 class="popBox">Top k</h6>
+                <span class="popText">
+                    Limits the number of options considered during text generation. It keeps only the K most probable words in the selection process. For instance, if K is 50, the model will only choose from the 50 most likely words.
+                    In contrast, temperature adjusts the overall randomness of the output.
+                    Top P, on the other hand, keeps adding likely words until the total probability reaches a certain threshold (e.g., 80%).
+                    So, Top K limits options by quantity, temperature controls overall randomness, and Top P does so based on cumulative probability.
+                </span>
             </div>
             <input type="number" id="topK" placeholder="Top K" min="0" max="10000" step="1" value="0">
         </div>
         <div id="maxTokensContainer">
             <label class="labelWithPopup" for="maxTokens">Max Tokens:</label>
             <div class="popupHidden">
-                Explicación detallada para etiqueta 1.
+                <h6 class="popBox">Max Tokens</h6>
+                <span class="popText">
+                    Refers to the maximum number of tokens (1 word = 1.3 est. tokens, in English) that a language model can generate in a single response. 
+                    It limits the total number of tokens in the combined input and output sequence.
+                    For example, if you set "max tokens" to 50, the model will generate a response that is up to 50 tokens in length, If the response exceeds this limit, 
+                    it can be truncated or cut off accordingly.
+                </span>    
             </div>
             <input type="number" id="maxTokens" placeholder="Max Tokens" min="0" max="1000" step="1" value="0">
         </div>
         <div id="frequencyPenaltyContainer">
             <label class="labelWithPopup" for="frequencyPenalty">Frequency Penalty:&nbsp;<output id="frequencyPenaltyOutput"></output></label>
             <div class="popupHidden">
-                Explicación detallada para etiqueta 1.
+                <h6 class="popBox">Frequency Penalty</h6>
+                <span class="popText">
+                    Is a setting used to control how often the model repeats certain words or phrases. It discourages the model from using the same word or phrase repeatedly in a response.
+                    For example, if you set a positive Frequency Penalty encourage the model to avoid repeating the same words or phrases. If you set a negative Frequency Penalty, on the other hand, encourages repetition.
+                    It helps make the generated text more diverse and natural-sounding by reducing excessive repetition.
+                </span>
             </div>
             <input type="range" id="frequencyPenalty" min="-2" max="2" step="0.1" value="0.0">
         </div>
         <div id="presencePenaltyContainer">
             <label class="labelWithPopup" for="presencePenalty">Presence Penalty:&nbsp;<output id="presencePenaltyOutput"></output></label>
             <div class="popupHidden">
-                Explicación detallada para etiqueta 1.
+                <h6 class="popBox">Presence Penalty</h6>
+                <span class="popText">
+                    Is a setting that influences how often the model includes words or entities in its generated text.
+                    A positive Presence Penalty encourages the model to reuse the words included in your prompt more frequently in the output.
+                    A negative Presence Penalty discourages the model from using them.
+                    For Example, Prompt: "Generate a story about an astronaut exploring a distant planet." {"presence_penalty": 0.8}. 
+                    This will encourage the model to use the words astronaut, planet, or even story more often in the output.
+                </span>
             </div>
             <input type="range" id="presencePenalty" min="-2" max="2" step="0.1" value="0.0">
         </div>
@@ -255,18 +308,22 @@
     </div>
     </diV>
     <div id="prompt">
-        <label for="promptContaines">Prompt Result</label>
+        <label for="promptContaines"><h3>Prompt Result</h3></label>
         <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
                 <div class="textDefinition" style="display: none;">
-                    <p>Variables can be used to store in memory spaces in a short 
+                    <p>This is the result of the prompt generated from the input information and the selected settings, 
+                        this information is not stored by us. We consider that this prompt is optimized and contains all 
+                        the prompt engineering techniques necessary for a good result, but you can use the resulting information
+                        or edit it before using it in ChatGPT. Consider that ChatGPT supports approximately 10000 words in its input
+                        We hope you find it useful!
                     </p>
                 </div>
                 <br>
-        <button id="generate">Generate Prompt</button>
+        <button id="generate" class= "buttonGreen" >Generate Prompt</button>
         <button id="deletePrompt">Delete Prompt</button>
         <div id="output"></div>
         <div id="charWordCount"></div>
-        <button id="copy" disabled>Copy Prompt</button><br>
+        <button id="copy" class="buttonGreen" disabled>Copy Prompt</button><br>
     </div>
     <script src="script.js"></script>
     </main>

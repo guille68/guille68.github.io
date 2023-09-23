@@ -20,7 +20,7 @@ const freqyPenaltyOutput = document.getElementById("frequencyPenaltyOutput");
 const presPenaltySlider = document.getElementById("presencePenalty");
 const presPenaltyOutput = document.getElementById("presencePenaltyOutput");
 const audienceText = document.getElementById("audience");
-const formatOpt = document.getElementById("formatOpt")
+const formatOpt = document.getElementById("formatOpt");
 const textAreaText = document.getElementById("text");
 const textAreaContext = document.getElementById("context");
 const variableNames = document.getElementsByClassName("variableName");
@@ -440,10 +440,24 @@ fetch("tasks.json")
 
   if (selectedItem) {
     // Copiar los datos en los campos correspondientes
-    document.getElementById("variableName_0").value = selectedItem.valname;
-    document.getElementById("variableValue_0").value = selectedItem.valvalue;
     document.getElementById("context").value = selectedItem.context;
     document.getElementById("text").value = selectedItem.input;
+    document.getElementById("model").value = selectedItem.model;
+    document.getElementById("langOption").value = selectedItem.language;
+    document.getElementById("roleOpt").value = selectedItem.role;
+    document.getElementById("writingStyleOpt").value = selectedItem.writingStyle;
+    document.getElementById("toneOpt").value = selectedItem.tone;
+    document.getElementById("sentiment").value = selectedItem.sentiment;
+    document.getElementById("formatOpt").value = selectedItem.format;
+    document.getElementById("audience").value = selectedItem.audience;
+    document.getElementById("temperature").value = selectedItem.temperature;
+    document.getElementById("topP").value = selectedItem.top_p;
+    document.getElementById("topK").value = selectedItem.top_k;
+    document.getElementById("maxTokens").value = selectedItem.max_tokens;
+    document.getElementById("frequencyPenalty").value = selectedItem.frequency_penalty;
+    document.getElementById("presencePenalty").value = selectedItem.presence_penalty;
+    document.getElementById("variableName_0").value = selectedItem.valname;
+    document.getElementById("variableValue_0").value = selectedItem.valvalue;
   }
 });
 })

@@ -17,9 +17,33 @@ select, input, textarea, button {
   border-radius: 10px;
 }
 
+input[type='text']  {
+  height: 20px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#deleteButton {
+  height: 25px;
+  background-color: #4ECCC5;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+[id^='deleteButton_'] {
+  height: 26px;
+  background-color: #d90429;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
 #context, #text {
   height: 100px;
   box-sizing: border-box;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
 #copy {
@@ -46,6 +70,8 @@ label {
   margin-top: 10px;
   white-space: pre-wrap;
   border-radius: 10px;
+  font-size: 14px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
 textarea {
@@ -104,24 +130,88 @@ textarea {
   margin-top: 5px;
   height: 20px;
   width: 10vw;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
 #modelOption, #languageOption, #roleOption, #writingStyle, #toneOption, #sentimentOption, #audienceContainer, #formatOption, #taskContainer {
   display: flex;
-  grid-template-columns: 1fr 2fr; /* Define dos columnas, la primera 1fr y la segunda 2fr */
   margin-left: 10px;
   margin-bottom: 15px;
 }
 
 #model, #langOption, #roleOpt, #writingStyleOpt, #toneOpt, #sentiment, #audience, #formatOpt, #taskOption {
   margin-left: 5px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
   width: 35vw; /* Esto hará que el ancho sea el 100% del contenedor padre */
 }
 
+
 input[type="range"] {
-  width: 45vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
+  width: 44vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
   /* Aquí puedes añadir más estilos específicos para los input de tipo "range" */
 }
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #4eccc5;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 3.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -8px; /* Centers thumb on the track */
+  background-color: #908989;
+  border-radius: 0.5rem;
+  height: 1.5rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #908989;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #4eccc5;
+  border-radius: 3.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #908989;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1.5rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #908989;
+  outline-offset: 0.125rem;
+}
+
 
 #deletePrompt {
     position: relative;
@@ -206,7 +296,7 @@ input[type="range"] {
     column-count: 1; /* Cambiar a una sola columna en pantallas más pequeñas */
   }
   input[type="range"] {
-    width: 85vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
+    width: 80vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
     /* Aquí puedes añadir más estilos específicos para los input de tipo "range" */
   }
   #model, #langOption, #roleOpt, #writingStyleOpt, #toneOpt, #sentiment, #audience, #formatOpt, #taskOption {
@@ -243,4 +333,118 @@ input[type="range"] {
   font-size: 12px!important;
   line-height: 20px!important;
   text-align: left!important
+}
+
+
+.buttonGreen {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #4ECCC5;
+  z-index: 1;
+}
+
+.buttonGreen:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.buttonGreen:after {
+  border-radius: 10px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+  background-color: #76d7d2;
+  right: 0;
+}
+
+.buttonGreen:active {
+  top: 2px;
+}
+
+.buttonGreen[disabled] {
+  filter: grayscale(100%);
+}
+
+
+#deletePrompt {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #d90429;
+  z-index: 1;
+}
+
+#deletePrompt:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#deletePrompt:after {
+  border-radius: 10px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+  background-color: #ef233c;
+  right: 0;
+}
+
+#deletePrompt:active {
+  top: 2px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  #twoColumn {
+    column-count: 1; /* Cambiar a una sola columna en pantallas más pequeñas */
+  }
+  input[type="range"] {
+    width: 80vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
+    /* Aquí puedes añadir más estilos específicos para los input de tipo "range" */
+  }
+  #model, #langOption, #roleOpt, #writingStyleOpt, #toneOpt, #sentiment, #audience, #formatOpt, #taskOption {
+    width: 58vw; /* Esto hará que el ancho sea el 70% del contenedor padre */
+  }
+  #topK, #maxTokens {
+    width: 40vw;
+  }
+  .buttonGreen {
+    min-width: auto;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  #deletePrompt {
+    min-width: auto;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
 }
