@@ -52,7 +52,7 @@
           "writingStyle": "Default",
           "tone":"Conversasional",
           "sentiment": "Default",
-          "format": "Letter",
+          "format": "Cover Letter",
           "audience": "",
           "temperature": "0.0",
           "top_p": "0.0",
