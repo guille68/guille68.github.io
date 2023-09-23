@@ -11,6 +11,7 @@
     { "code": "Chat Conversation", "name": "Chat Conversation" },
     { "code": "Checklist", "name": "Checklist" },
     { "code": "CSV", "name": "CSV" },
+    { "code": "Cover Letter", "name": "Cover Letter" },
     { "code": "Email", "name": "Email" },
     { "code": "HTML", "name": "HTML" },
     { "code": "Journal Entry", "name": "Journal Entry" },
