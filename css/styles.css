@@ -22,6 +22,18 @@ input[type='text']  {
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+    justify-content: center; /* Añade esta línea para centrar horizontalmente */
+    text-align: center;
+}
+
+.logo {
+  width: 95px; /* Puedes ajustar el tamaño según tus necesidades */
+  margin-left: 10px;
+}
+
 .deleteButton {
   display: flex;
   justify-content: center;
@@ -30,12 +42,14 @@ input[type='text']  {
 
 #deleteButton {
   height: 25px;
+  border-width: 1px;
   background-color: #4ECCC5;
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
 [id^='deleteButton_'] {
   height: 26px;
+  border-width: 1px;
   background-color: #d90429;
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 }
@@ -217,7 +231,7 @@ input[type="range"]:focus::-moz-range-thumb{
 #deletePrompt {
     position: relative;
     left: 44%;
-    transform: translateX(-41%);
+    transform: translateX(-55%);
     margin-top: 10px;
 }
 
@@ -411,6 +425,9 @@ input[type="range"]:focus::-moz-range-thumb{
 
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }  
   #twoColumn {
     column-count: 1; /* Cambiar a una sola columna en pantallas más pequeñas */
   }
