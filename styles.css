@@ -13,7 +13,10 @@ input {
   margin-bottom: 10px;
 }
 
-select, input, textarea, button {
+select, 
+input, 
+textarea, 
+button {
   border-radius: 10px;
 }
 
@@ -22,15 +25,30 @@ input[type='text']  {
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
+textarea {
+  font-family: Arial, sans-serif;
+  display: block;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px;
+  resize: none;
+}
+
+label {
+  margin-top: 10px;
+}
+
 .deleteButton {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 #deleteButton {
   height: 25px;
   background-color: #4ECCC5;
+  border-width: 1px;
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
@@ -55,15 +73,6 @@ input[type='text']  {
   display: block;
 }
 
-.deleteButton {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-label {
-  margin-top: 10px;
-}
-
 #output {
   border: 1px solid #ccc;
   padding: 10px;
@@ -72,16 +81,6 @@ label {
   border-radius: 10px;
   font-size: 14px;
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
-}
-
-textarea {
-  font-family: Arial, sans-serif;
-  display: block;
-  border: 1px solid #ccc;
-  width: 100%;
-  padding: 5px;
-  resize: vertical;
-  resize: none;
 }
 
 .hidden {
@@ -407,8 +406,6 @@ input[type="range"]:focus::-moz-range-thumb{
 #deletePrompt:active {
   top: 2px;
 }
-
-
 
 @media screen and (max-width: 768px) {
   #twoColumn {
