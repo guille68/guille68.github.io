@@ -568,7 +568,7 @@ document.addEventListener('touchstart', function (event) {
   }
   
   label.addEventListener('click', toggleHidden);
-  label.addEventListener('touchstart', toggleHidden, { passive: true});
+  label.addEventListener('touchstart', toggleHidden);
   label.addEventListener('mouseover', function () {
   this.nextElementSibling.classList.remove('hidden');
   });
