@@ -564,11 +564,11 @@ document.addEventListener('touchstart', function (event) {
   document.querySelectorAll('.labelWithPopup').forEach(function (label) {
   function toggleHidden(event) {
     if (event.cancelable) event.preventDefault();
-  this.nextElementSibling.classList.toggle('hidden');
+    this.nextElementSibling.classList.toggle('hidden');
   }
   
   label.addEventListener('click', toggleHidden);
-  label.addEventListener('touchstart', toggleHidden);
+  label.addEventListener('touchstart', toggleHidden, { passive: true});
   label.addEventListener('mouseover', function () {
   this.nextElementSibling.classList.remove('hidden');
   });
@@ -576,3 +576,4 @@ document.addEventListener('touchstart', function (event) {
   this.nextElementSibling.classList.add('hidden');
   });
   });
+ 

@@ -1,673 +1,1029 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>AI.Tech - Artificial Intelligence HTML Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="./css/styles1.css" rel="stylesheet"/>
+  </head>
 
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-grow text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="text-white">AI<span class="text-dark">.</span>Tech</h1>
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link active">Projects</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu bg-light mt-2">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="faq.html" class="dropdown-item">FAQs</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
-                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+          <a href="index.html" class="navbar-brand">
+            <h1 class="text-white">AI<span class="text-dark">.</span>Tech</h1>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler ms-auto me-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="service.html" class="nav-item nav-link">Services</a>
+              <a href="project.html" class="nav-item nav-link active"
+                >Projects</a
+              >
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Pages</a
+                >
+                <div class="dropdown-menu bg-light mt-2">
+                  <a href="feature.html" class="dropdown-item">Features</a>
+                  <a href="team.html" class="dropdown-item">Our Team</a>
+                  <a href="faq.html" class="dropdown-item">FAQs</a>
+                  <a href="testimonial.html" class="dropdown-item"
+                    >Testimonial</a
+                  >
+                  <a href="404.html" class="dropdown-item">404 Page</a>
                 </div>
-            </nav>
-        </div>
+              </div>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <butaton
+              type="button"
+              class="btn text-white p-0 d-none d-lg-block"
+              data-bs-toggle="modal"
+              data-bs-target="#searchModal"
+              ><i class="fa fa-search"></i
+            ></butaton>
+          </div>
+        </nav>
+      </div>
     </div>
     <!-- Navbar End -->
 
-
     <!-- Hero Start -->
     <div class="container-fluid pt-5 bg-primary hero-header">
-        <div class="container pt-5">
-            <div class="row g-5 pt-5">
-                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">Our Projects</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Our Projects</li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <img class="img-fluid" src="img/hero-img.png" alt="" style="max-height: 300px;">
-                </div>
-            </div>
+      <div class="container pt-5">
+        <div class="row g-5 pt-5">
+          <div
+            class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5"
+          >
+            <h1 class="display-4 text-white mb-4 animated slideInRight">
+              Our Projects
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol
+                class="breadcrumb justify-content-center justify-content-lg-start mb-0"
+              >
+                <li class="breadcrumb-item">
+                  <a class="text-white" href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="text-white" href="#">Pages</a>
+                </li>
+                <li
+                  class="breadcrumb-item text-white active"
+                  aria-current="page"
+                >
+                  Our Projects
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col-lg-6 align-self-end text-center text-lg-end">
+            <img
+              class="img-fluid"
+              src="img/hero-img.png"
+              alt=""
+              style="max-height: 300px"
+            />
+          </div>
         </div>
+      </div>
     </div>
     <!-- Hero End -->
 
-
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-light p-3"
-                            placeholder="Type search keyword">
-                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(20, 24, 62, 0.7)">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn btn-square bg-white btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body d-flex align-items-center justify-content-center"
+          >
+            <div class="input-group" style="max-width: 600px">
+              <input
+                type="text"
+                class="form-control bg-transparent border-light p-3"
+                placeholder="Type search keyword"
+              />
+              <button class="btn btn-light px-4">
+                <i class="bi bi-search"></i>
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Full Screen Search End -->
 
-
     <!-- Case Start -->
-  <div id="promptChatGPT">
-    <div class="header-container">
-        <h1 id="tittleGpt" >ChatGPT Prompt Generator</h1>
-    </div>
-    <h6 class="chatgpt">
-        This ChatGPT prompt generation tool is designed to assist in prompt engineering, 
-        this platform allows users to effortlessly configure the parameters for ChatGPT. 
-        Whether you are an experienced developer or just starting out, our easy-to-use interface makes the process seamless. 
-        Say goodbye to manual settings and welcome a more efficient and productive workflow.<br>
-        IMPORTANT: We do not view or store any of your inputs information or your selections, use it freely!
-    </h6>
-    <diV id="twoColumn">
-    <div id="variables">
-    <label for="variableContainer"><h6>Variables</h6></label>
-    <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
-                <div class="textDefinition" style="display: none;">
-                    <p>Variables are used to reserve memory spaces in a concise {manner}, holding the information we intend to utilize in our output prompt or as a reference. It's possible to define multiple variables.<br>
-                        For instance:<br>
-                        Variable Name: S<br>
-                        Variable Value: Rising Sun<br>
-                        Input: Compose a poem about {R} where it is mentioned exactly 10 times.<br>
-                        You can add as many variables as you want, but the model could hallucinate. 
-                    </p>
-                </div>
-    <div id="variableContainer">
-        <div id="variableNameCont">
-            <label for="variableName">Variable Name:</label>
-            <input type="text" class="variableName" placeholder="Insert a name" id="variableName_0">
-        </div>
-        <div id="variableValueCont">
-            <label for="variableValue">Variable Value:</label>
-            <input type="text" class="variableValue" placeholder="Insert a value" id="variableValue_0">
-        </div>
-        <div id="deleteVariables">
-            <label for="deleteVariables">I/D:</label>
-            <button type="button" class="deleteButton" id="deleteButton" onclick="agregarElemento()">+</button>
-        </div>
-    </div>
-    <div id="taskContainer">
-        <label class="labelWithPopup" for="task">Task:</label>
-        <div class="popupHidden">
-            <h6 class="popBox">Task</h6>
-            <span class="popText">
-                We have defined some tasks that you can use as
-                a model and replace the data with your own data, experiment! 
-            </span>
-        </div>
-        <select id="taskOption">
-    </select>
-    </div>
-             <label for="context">Context:</label>
-             <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
-                <div class="textDefinition" style="display: none;">
-                    <p>The context provides the model with the initial information to start its task or 
-                        to know the purpose and scope of what we are going to ask for in the input, is not always necessary.<br>
-                        Example: You want to Summarize a text - In the context you enter the text you are 
-                        going to work on. - In the input: Enter the specifications about the summary to be requested.</p>
-                </div>
-             <textarea id="context" placeholder="Describe the context or enter information for ChatGPT better picture"></textarea>
-             <div id="charWordCountContext">0 chars / 0 words / 0 est. tokens</div>
-             <div class="dropdown">
-                <button class= "buttonGreen" onclick="agregarElementos('context')">Add Varibles</button>
-                <ul class="dropdown-content" id="menuDesplegable" tabindex="0" onkeydown="navegarMenu(event)">
-                </ul>
-            </div>            
-             <label for="text">Input:</label>
-             <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
-                <div class="textDefinition" style="display: none;">
-                    <p>It is the heart of the prompt, in this part we request the specific and necessary task to ChatGPR.<br>
-                       Example: To summarize text, in the input text we would write: "Summarize the text separating the topics by titles and 
-                       highlighting the main concepts of the Text:"<br>(when using context always refer to "the text" and end the imput with "Text:" 
-                       for a better interpretation of the model.)<br>
-                       In the output of the prompt you will see some formats like: f, """", etc. so that ChtaGPT interprets it better, we recommend not to alter them.</p>
-                </div>
-            <textarea id="text" placeholder="Enter your request for ChatGPT"></textarea>
-            <div id="charWordCountText">0 chars / 0 words / 0 est. tokens</div>
-            <div class="dropdown">
-                <button class= "buttonGreen" onclick="agregarElementos('text')">Add Variables</button>
-                <ul class="dropdown-content" id="menuDesplegableText" tabindex="0" onkeydown="navegarMenu(event)">
-                </ul>
+    <div id="promptChatGPT">
+      <div class="header-container">
+        <h1 id="tittleGpt">ChatGPT Prompt Generator</h1>
+      </div>
+        <p class="chatgpt">
+            This ChatGPT prompt generation tool is designed to assist in prompt
+            engineering, this platform allows users to effortlessly configure the
+            parameters for ChatGPT. Whether you are an experienced developer or just
+            starting out, our easy-to-use interface makes the process seamless. Say
+            goodbye to manual settings and welcome a more efficient and productive
+            workflow.<br />
+            IMPORTANT: We do not view or store any of your inputs information or
+            your selections, use it freely!
+        </p>
+      <div id="twoColumn">
+        <div id="variables">
+          <label><h6>Variables</h6></label>
+          <button id="variableButton" class="toggleButton" onclick="moreInfo(this)">
+            + Definition
+          </button>
+          <div class="textDefinition" style="display: none">
+            <p>
+              Variables are used to reserve memory spaces in a concise {manner},
+              holding the information we intend to utilize in our output prompt
+              or as a reference. It's possible to define multiple variables.<br />
+              For instance:<br />
+              Variable Name: S<br />
+              Variable Value: Rising Sun<br />
+              Input: Compose a poem about {R} where it is mentioned exactly 10
+              times.<br />
+              You can add as many variables as you want, but the model could
+              hallucinate.
+            </p>
+          </div>
+          <div id="variableContainer">
+            <div id="variableNameCont">
+              <label>Variable Name:</label>
+              <input
+                type="text"
+                class="variableName"
+                placeholder="Insert a name"
+                id="variableName_0"
+              />
             </div>
-    </div>
-    <div id="hiperparameter">     
-        <label for="parameters"><h6>Hiperparameters/ Parameters:</h6></label>
-        <button class="toggleButton" onclick="moreInfo(this)">+ Definitions </button>
-        <div class="textDefinition" style="display: none;">
-            <p>Hyperparameters are settings or configurations used to control the training process itself, rather than the learned 
-               relationships within the model. They are set prior to training and are not learned from the data (temperature, Top K, Etc.).<br>
-               Parameters are the internal variables that the model learns during training. They define the relationships between 
-               the input data and the predicted output. These values are specific to the particular dataset and task the model was trained on (Role, Tone, Etc.).</p>
-        </div>
-    <div id="parametersContainer">
-        <div id="modelOption">
-        <label class="labelWithPopup" for="model">Model:</label>
-        <div class="popupHidden">
-            <h6 class="popBox">Model</h6>
-            <span class="popText">
-                Refer to different iterations or releases of the ChatGPT model. Each version 
-                is a specific variation or improvement of the model, typically distinguished 
-                by factors like training data, architecture, and performance capabilities. 
-            </span>
-        </div>
-        <select id="model">
-            <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
-            <option value="text-babbage-001">text-babbage-001</option>
-            <option value="text-ada-001">text-ada-001</option>
-            <option value="gpt-3.5-turbo-0301">gpt-3.5-turbo-0301</option>
-            <option value="davinci-002">davinci-002</option>
-            <option value="gpt-3.5-turbo-0613">gpt-3.5-turbo-0613</option>
-            <option value="text-curie-001">text-curie-001</option>
-            <option value="code-cushman-001">code-cushman-001</option>
-        </select>
-        </div>
-        <div id="languageOption">
-            <label class="labelWithPopup" for="language">Language:</label>
+            <div id="variableValueCont">
+              <label>Variable Value:</label>
+              <input
+                type="text"
+                class="variableValue"
+                placeholder="Insert a value"
+                id="variableValue_0"
+              />
+            </div>
+            <div id="deleteVariables">
+                <label>I/D:</label>
+                <button
+                    type="button"
+                    class="deleteButton"
+                    id="deleteButton"
+                    onclick="agregarElemento()"
+                >
+                    +
+                </button>
+            </div>
+          </div>
+          <div id="taskContainer">
+            <label class="labelWithPopup" for="taskOption">Task:</label>
             <div class="popupHidden">
+              <h6 class="popBox">Task</h6>
+              <span class="popText">
+                We have defined some tasks that you can use as a model and
+                replace the data with your own data, experiment!
+              </span>
+            </div>
+            <select id="taskOption"></select>
+          </div>
+          <label for="context">Context:</label>
+          <button class="toggleButton" onclick="moreInfo(this)">
+            + Definition
+          </button>
+          <div class="textDefinition" style="display: none">
+            <p>
+              The context provides the model with the initial information to
+              start its task or to know the purpose and scope of what we are
+              going to ask for in the input, is not always necessary.<br />
+              Example: You want to Summarize a text - In the context you enter
+              the text you are going to work on. - In the input: Enter the
+              specifications about the summary to be requested.
+            </p>
+          </div>
+          <textarea
+            id="context"
+            placeholder="Describe the context or enter information for ChatGPT better picture"
+          ></textarea>
+          <div id="charWordCountContext">0 chars / 0 words / 0 est. tokens</div>
+          <div class="dropdownAdd">
+            <button class="buttonGreen" onclick="agregarElementos('context')">
+              Add Variables
+            </button>
+            <ul
+              class="dropdown-content"
+              id="menuDesplegable"
+              tabindex="0"
+              onkeydown="navegarMenu(event)"
+            ></ul>
+          </div>
+          <label for="text">Input:</label>
+          <button class="toggleButton" onclick="moreInfo(this)">
+            + Definition
+          </button>
+          <div class="textDefinition" style="display: none">
+            <p>
+              It is the heart of the prompt, in this part we request the
+              specific and necessary task to ChatGPR.<br />
+              Example: To summarize text, in the input text we would write:
+              "Summarize the text separating the topics by titles and
+              highlighting the main concepts of the Text:"<br />(when using
+              context always refer to "the text" and end the imput with "Text:"
+              for a better interpretation of the model.)<br />
+              In the output of the prompt you will see some formats like: f,
+              """", etc. so that ChtaGPT interprets it better, we recommend not
+              to alter them.
+            </p>
+          </div>
+          <textarea
+            id="text"
+            placeholder="Enter your request for ChatGPT"
+          ></textarea>
+          <div id="charWordCountText">0 chars / 0 words / 0 est. tokens</div>
+          <div class="dropdownAdd">
+            <button class="buttonGreen" onclick="agregarElementos('text')">
+              Add Variables
+            </button>
+            <ul
+              class="dropdown-content"
+              id="menuDesplegableText"
+              tabindex="0"
+              onkeydown="navegarMenu(event)"
+            ></ul>
+          </div>
+        </div>
+        <div id="hiperparameter">
+          <label><h6>Hiperparameters/ Parameters:</h6></label>
+          <button class="toggleButton" onclick="moreInfo(this)">
+            + Definitions
+          </button>
+          <div class="textDefinition" style="display: none">
+            <p>
+              Hyperparameters are settings or configurations used to control the
+              training process itself, rather than the learned relationships
+              within the model. They are set prior to training and are not
+              learned from the data (temperature, Top K, Etc.).<br />
+              Parameters are the internal variables that the model learns during
+              training. They define the relationships between the input data and
+              the predicted output. These values are specific to the particular
+              dataset and task the model was trained on (Role, Tone, Etc.).
+            </p>
+          </div>
+          <div id="parametersContainer">
+            <div id="modelOption">
+              <label class="labelWithPopup" for="model">Model:</label>
+              <div class="popupHidden">
+                <h6 class="popBox">Model</h6>
+                <span class="popText">
+                  Refer to different iterations or releases of the ChatGPT
+                  model. Each version is a specific variation or improvement of
+                  the model, typically distinguished by factors like training
+                  data, architecture, and performance capabilities.
+                </span>
+              </div>
+              <select id="model">
+                <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+                <option value="text-babbage-001">text-babbage-001</option>
+                <option value="text-ada-001">text-ada-001</option>
+                <option value="gpt-3.5-turbo-0301">gpt-3.5-turbo-0301</option>
+                <option value="davinci-002">davinci-002</option>
+                <option value="gpt-3.5-turbo-0613">gpt-3.5-turbo-0613</option>
+                <option value="text-curie-001">text-curie-001</option>
+                <option value="code-cushman-001">code-cushman-001</option>
+              </select>
+            </div>
+            <div id="languageOption">
+              <label class="labelWithPopup" for="langOption">Language:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Language</h6>
                 <span class="popText">
-                    Records indicate that ChatGPT can translate to more than 95 languages. 
-                    Just enter the imput and select the language, to indicate at the prompt 
-                    which language ChatGPT should deliver the response.
+                  Records indicate that ChatGPT can translate to more than 95
+                  languages. Just enter the imput and select the language, to
+                  indicate at the prompt which language ChatGPT should deliver
+                  the response.
                 </span>
+              </div>
+              <select id="langOption"></select>
             </div>
-            <select id="langOption">
-        </select>
-        </div>
-        <div id="roleOption">
-            <label class="labelWithPopup" for="role">Role:</label>
-            <div class="popupHidden">
+            <div id="roleOption">
+              <label class="labelWithPopup" for="roleOpt">Role:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Role</h6>
                 <span class="popText">
-                    LLMs are models that can be positioned in a certain role 
-                    to deliver more accurate answers, such as Technology advisor 
-                    or Copywriter. You will find many predefined ones to help you 
-                    in your task, if you don't find it then you can edit it in your prompt. 
-                    First understand the structure of how they work and create your own.
+                  LLMs are models that can be positioned in a certain role to
+                  deliver more accurate answers, such as Technology advisor or
+                  Copywriter. You will find many predefined ones to help you in
+                  your task, if you don't find it then you can edit it in your
+                  prompt. First understand the structure of how they work and
+                  create your own.
                 </span>
+              </div>
+              <select id="roleOpt"></select>
             </div>
-            <select id="roleOpt">
-        </select>
-        </div>
-        <div id="writingStyle">
-            <label class="labelWithPopup" for="style">Writing Style:</label>
-            <div class="popupHidden">
+            <div id="writingStyle">
+              <label class="labelWithPopup" for="writingStyleOpt">Writing Style:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Writing Style</h6>
                 <span class="popText">
-                    You can tell ChatGPT the style of writing you want in your 
-                    response and it can be as varied as academic or thriller. 
-                    Play with the styles and have fun.
+                  You can tell ChatGPT the style of writing you want in your
+                  response and it can be as varied as academic or thriller. Play
+                  with the styles and have fun.
                 </span>
+              </div>
+              <select id="writingStyleOpt"></select>
             </div>
-            <select id="writingStyleOpt">
-        </select>
-        </div>
-        <div id="toneOption">
-            <label class="labelWithPopup" for="tone">Tone:</label>
-            <div class="popupHidden">
+            <div id="toneOption">
+              <label class="labelWithPopup" for="toneOpt">Tone:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Tone</h6>
                 <span class="popText">
-                    Define the tone of the response text that ChatGPT will 
-                    give you. It can be as varied as: funny or sarcastic, play 
-                    around with them, mixing different parameters.
+                  Define the tone of the response text that ChatGPT will give
+                  you. It can be as varied as: funny or sarcastic, play around
+                  with them, mixing different parameters.
                 </span>
+              </div>
+              <select id="toneOpt"></select>
             </div>
-            <select id="toneOpt">
-        </select>
-        </div>
-        <div id="sentimentOption">
-            <label class="labelWithPopup" for="sentiment">Sentiment:</label>
-            <div class="popupHidden">
+            <div id="sentimentOption">
+              <label class="labelWithPopup" for="sentiment">Sentiment:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Sentiment</h6>
                 <span class="popText">
-                    You can define the sentiment with which you want ChatGPT to write. 
-                    This Hyperparameter can also be used in the Input, to analyze reviews, 
-                    posts, emails, etc. Search in the Task option "Review Classification".
+                  You can define the sentiment with which you want ChatGPT to
+                  write. This Hyperparameter can also be used in the Input, to
+                  analyze reviews, posts, emails, etc. Search in the Task option
+                  "Review Classification".
                 </span>
-            </div>
-            <select id="sentiment">
+              </div>
+              <select id="sentiment">
                 <option value="Default">Default</option>
                 <option value="Neutral">Neutral</option>
                 <option value="Positive">Positive</option>
                 <option value="Negative">Negative</option>
-            </select>
-        </div>
-        <div id="formatOption">
-            <label class="labelWithPopup" for="format">Format:</label>
-            <div class="popupHidden">
+              </select>
+            </div>
+            <div id="formatOption">
+              <label class="labelWithPopup" for="formatOpt">Format:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Format</h6>
                 <span class="popText">
-                    It is important that we define the output format in which 
-                    we want ChatGPT to deliver the content, this can save us 
-                    work and processing time. The model contemplates many formats, 
-                    try them. By default it will deliver a format according to the 
-                    interpretation it makes.
+                  It is important that we define the output format in which we
+                  want ChatGPT to deliver the content, this can save us work and
+                  processing time. The model contemplates many formats, try
+                  them. By default it will deliver a format according to the
+                  interpretation it makes.
                 </span>
+              </div>
+              <select id="formatOpt"></select>
             </div>
-            <select id="formatOpt">
-        </select>
-        </div>
-        <div id="audienceContainer">
-            <label class="labelWithPopup" for="audience">Audience:</label>
-            <div class="popupHidden">
+            <div id="audienceContainer">
+              <label class="labelWithPopup" for="audience">Audience:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Audience</h6>
                 <span class="popText">
-                    One of the guidelines is to be specific, by defining the audience 
-                    the model selects the mode, difficulty and language used in the response. 
-                    Place your target audience for the model's response. Blank will use medium 
-                    complexity and language.
+                  One of the guidelines is to be specific, by defining the
+                  audience the model selects the mode, difficulty and language
+                  used in the response. Place your target audience for the
+                  model's response. Blank will use medium complexity and
+                  language.
                 </span>
+              </div>
+              <textarea
+                id="audience"
+                placeholder="E.g.:5 years old children, engineering students, medical conference, etc"
+              ></textarea>
             </div>
-            <textarea id="audience" placeholder="E.g.:5 years old children, engineering students, medical conference, etc"></textarea>
-        </div>
-        <div id="temperatureContainer">
-            <label class="labelWithPopup" for="temperature">Temperature:&nbsp;<output id="temperatureOutput"></output></label>
-            <div class="popupHidden">
+            <div id="temperatureContainer">
+              <label class="labelWithPopup" for="temperature"
+                >Temperature:&nbsp;<output id="temperatureOutput"></output
+              ></label>
+              <div class="popupHidden">
                 <h6 class="popBox">Temperature</h6>
                 <span class="popText">
-                    Is like a knob that controls how random or focused the generated text is.
-                    High temperature (e.g., 0.8) makes the output more creative and unpredictable.
-                    Low temperature (e.g., 0.2) makes the output more focused and deterministic.
-                    Adjusting temperature helps strike a balance between creativity and sticking to a specific pattern.
+                  Is like a knob that controls how random or focused the
+                  generated text is. High temperature (e.g., 0.8) makes the
+                  output more creative and unpredictable. Low temperature (e.g.,
+                  0.2) makes the output more focused and deterministic.
+                  Adjusting temperature helps strike a balance between
+                  creativity and sticking to a specific pattern.
                 </span>
+              </div>
+              <input
+                type="range"
+                id="temperature"
+                min="0"
+                max="2"
+                step="0.1"
+                value="0.0"
+              />
             </div>
-            <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.0">
-        </div>
-        <div id="topPContainer">
-            <label class="labelWithPopup" for="topP">Top P:&nbsp;<output id="topPOutput"></output></label>
-            <div class="popupHidden">
+            <div id="topPContainer">
+              <label class="labelWithPopup" for="topP"
+                >Top P:&nbsp;<output id="topPOutput"></output
+              ></label>
+              <div class="popupHidden">
                 <h6 class="popBox">Top P</h6>
                 <span class="popText">
-                    Narrows word choices based on probability, it limits the selection of words to the most probable ones. For example, if you set Top P to 0.8, the model will consider words that make up 80% of the total probability mass.
-                    Temperature adjusts how evenly distributed these probabilities are, influencing randomness. Both control text generation, but in different ways.
+                  Narrows word choices based on probability, it limits the
+                  selection of words to the most probable ones. For example, if
+                  you set Top P to 0.8, the model will consider words that make
+                  up 80% of the total probability mass. Temperature adjusts how
+                  evenly distributed these probabilities are, influencing
+                  randomness. Both control text generation, but in different
+                  ways.
                 </span>
+              </div>
+              <input
+                type="range"
+                id="topP"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.00"
+              />
             </div>
-            <input type="range" id="topP" min="0" max="1" step="0.01" value="0.00">
-        </div>        
-        <div id="topKContainer">
-            <label class="labelWithPopup" for="topK">Top K:</label>
-            <div class="popupHidden">
+            <div id="topKContainer">
+              <label class="labelWithPopup" for="topK">Top K:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Top k</h6>
                 <span class="popText">
-                    Limits the number of options considered during text generation. It keeps only the K most probable words in the selection process. For instance, if K is 50, the model will only choose from the 50 most likely words.
-                    In contrast, temperature adjusts the overall randomness of the output.
-                    Top P, on the other hand, keeps adding likely words until the total probability reaches a certain threshold (e.g., 80%).
-                    So, Top K limits options by quantity, temperature controls overall randomness, and Top P does so based on cumulative probability.
+                  Limits the number of options considered during text
+                  generation. It keeps only the K most probable words in the
+                  selection process. For instance, if K is 50, the model will
+                  only choose from the 50 most likely words. In contrast,
+                  temperature adjusts the overall randomness of the output. Top
+                  P, on the other hand, keeps adding likely words until the
+                  total probability reaches a certain threshold (e.g., 80%). So,
+                  Top K limits options by quantity, temperature controls overall
+                  randomness, and Top P does so based on cumulative probability.
                 </span>
+              </div>
+              <input
+                type="number"
+                id="topK"
+                placeholder="Top K"
+                min="0"
+                max="10000"
+                step="1"
+                value="0"
+              />
             </div>
-            <input type="number" id="topK" placeholder="Top K" min="0" max="10000" step="1" value="0">
-        </div>
-        <div id="maxTokensContainer">
-            <label class="labelWithPopup" for="maxTokens">Max Tokens:</label>
-            <div class="popupHidden">
+            <div id="maxTokensContainer">
+              <label class="labelWithPopup" for="maxTokens">Max Tokens:</label>
+              <div class="popupHidden">
                 <h6 class="popBox">Max Tokens</h6>
                 <span class="popText">
-                    Refers to the maximum number of tokens (1 word = 1.3 est. tokens, in English) that a language model can generate in a single response. 
-                    It limits the total number of tokens in the combined input and output sequence.
-                    For example, if you set "max tokens" to 50, the model will generate a response that is up to 50 tokens in length, If the response exceeds this limit, 
-                    it can be truncated or cut off accordingly.
-                </span>    
+                  Refers to the maximum number of tokens (1 word = 1.3 est.
+                  tokens, in English) that a language model can generate in a
+                  single response. It limits the total number of tokens in the
+                  combined input and output sequence. For example, if you set
+                  "max tokens" to 50, the model will generate a response that is
+                  up to 50 tokens in length, If the response exceeds this limit,
+                  it can be truncated or cut off accordingly.
+                </span>
+              </div>
+              <input
+                type="number"
+                id="maxTokens"
+                placeholder="Max Tokens"
+                min="0"
+                max="1000"
+                step="1"
+                value="0"
+              />
             </div>
-            <input type="number" id="maxTokens" placeholder="Max Tokens" min="0" max="1000" step="1" value="0">
-        </div>
-        <div id="frequencyPenaltyContainer">
-            <label class="labelWithPopup" for="frequencyPenalty">Frequency Penalty:&nbsp;<output id="frequencyPenaltyOutput"></output></label>
-            <div class="popupHidden">
+            <div id="frequencyPenaltyContainer">
+              <label class="labelWithPopup" for="frequencyPenalty"
+                >Frequency Penalty:&nbsp;<output
+                  id="frequencyPenaltyOutput"
+                ></output
+              ></label>
+              <div class="popupHidden">
                 <h6 class="popBox">Frequency Penalty</h6>
                 <span class="popText">
-                    Is a setting used to control how often the model repeats certain words or phrases. It discourages the model from using the same word or phrase repeatedly in a response.
-                    For example, if you set a positive Frequency Penalty encourage the model to avoid repeating the same words or phrases. If you set a negative Frequency Penalty, on the other hand, encourages repetition.
-                    It helps make the generated text more diverse and natural-sounding by reducing excessive repetition.
+                  Is a setting used to control how often the model repeats
+                  certain words or phrases. It discourages the model from using
+                  the same word or phrase repeatedly in a response. For example,
+                  if you set a positive Frequency Penalty encourage the model to
+                  avoid repeating the same words or phrases. If you set a
+                  negative Frequency Penalty, on the other hand, encourages
+                  repetition. It helps make the generated text more diverse and
+                  natural-sounding by reducing excessive repetition.
                 </span>
+              </div>
+              <input
+                type="range"
+                id="frequencyPenalty"
+                min="-2"
+                max="2"
+                step="0.1"
+                value="0.0"
+              />
             </div>
-            <input type="range" id="frequencyPenalty" min="-2" max="2" step="0.1" value="0.0">
-        </div>
-        <div id="presencePenaltyContainer">
-            <label class="labelWithPopup" for="presencePenalty">Presence Penalty:&nbsp;<output id="presencePenaltyOutput"></output></label>
-            <div class="popupHidden">
+            <div id="presencePenaltyContainer">
+              <label class="labelWithPopup" for="presencePenalty"
+                >Presence Penalty:&nbsp;<output
+                  id="presencePenaltyOutput"
+                ></output
+              ></label>
+              <div class="popupHidden">
                 <h6 class="popBox">Presence Penalty</h6>
                 <span class="popText">
-                    Is a setting that influences how often the model includes words or entities in its generated text.
-                    A positive Presence Penalty encourages the model to reuse the words included in your prompt more frequently in the output.
-                    A negative Presence Penalty discourages the model from using them.
-                    For Example, Prompt: "Generate a story about an astronaut exploring a distant planet." {"presence_penalty": 0.8}. 
-                    This will encourage the model to use the words astronaut, planet, or even story more often in the output.
+                  Is a setting that influences how often the model includes
+                  words or entities in its generated text. A positive Presence
+                  Penalty encourages the model to reuse the words included in
+                  your prompt more frequently in the output. A negative Presence
+                  Penalty discourages the model from using them. For Example,
+                  Prompt: "Generate a story about an astronaut exploring a
+                  distant planet." {"presence_penalty": 0.8}. This will
+                  encourage the model to use the words astronaut, planet, or
+                  even story more often in the output.
                 </span>
+              </div>
+              <input
+                type="range"
+                id="presencePenalty"
+                min="-2"
+                max="2"
+                step="0.1"
+                value="0.0"
+              />
             </div>
-            <input type="range" id="presencePenalty" min="-2" max="2" step="0.1" value="0.0">
+          </div>
         </div>
-    </div>
-    </div>
-    </diV>
-    <div id="prompt">
-        <label for="promptContaines"><h6>Prompt Result</h6></label>
-        <button class="toggleButton" onclick="moreInfo(this)">+ Definition </button>
-                <div class="textDefinition" style="display: none;">
-                    <p>This is the result of the prompt generated from the input information and the selected settings, 
-                        this information is not stored by us. We consider that this prompt is optimized and contains all 
-                        the prompt engineering techniques necessary for a good result, but you can use the resulting information
-                        or edit it before using it in ChatGPT. Consider that ChatGPT supports approximately 10000 words in its input
-                        We hope you find it useful!
-                    </p>
-                </div>
-                <br>
-        <button id="generate" class= "buttonGreen" >Generate Prompt</button>
+      </div>
+      <div id="prompt">
+        <label><h6>Prompt Result</h6></label>
+        <button class="toggleButton" onclick="moreInfo(this)">
+          + Definition
+        </button>
+        <div class="textDefinition" style="display: none">
+          <p>
+            This is the result of the prompt generated from the input
+            information and the selected settings, this information is not
+            stored by us. We consider that this prompt is optimized and contains
+            all the prompt engineering techniques necessary for a good result,
+            but you can use the resulting information or edit it before using it
+            in ChatGPT. Consider that ChatGPT supports approximately 10000 words
+            in its input We hope you find it useful!
+          </p>
+        </div>
+        <br />
+        <button id="generate" class="buttonGreen">Generate Prompt</button>
         <button id="deletePrompt">Delete Prompt</button>
         <div id="output"></div>
         <div id="charWordCount"></div>
-        <button id="copy" class="buttonGreen" disabled>Copy Prompt</button><br>
+        <button id="copy" class="buttonGreen" disabled>Copy Prompt</button
+        ><br />
+      </div>
     </div>
-    <link rel="stylesheet" href="./css/styles1.css">
-</div>
     <!-- Case End -->
-
 
     <!-- FAQs Start -->
     <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Popular FAQs</div>
-                <h1 class="mb-4">Frequently Asked Questions</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="accordion" id="accordionFAQ1">
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    How to build a website?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How long will it take to get a new website?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.3s">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Do you only create HTML websites?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                    Will my website be mobile-friendly?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="accordion" id="accordionFAQ2">
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.5s">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Will you maintain my site for me?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    I’m on a strict budget. Do you have any low cost options?
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.7s">
-                            <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    Will you maintain my site for me?
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.8s">
-                            <h2 class="accordion-header" id="headingEight">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    I’m on a strict budget. Do you have any low cost options?
-                                </button>
-                            </h2>
-                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container py-5">
+        <div
+          class="mx-auto text-center wow fadeIn"
+          data-wow-delay="0.1s"
+          style="max-width: 500px"
+        >
+          <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
+            Popular FAQs
+          </div>
+          <h1 class="mb-4">Frequently Asked Questions</h1>
         </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="accordion" id="accordionFAQ1">
+              <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  >
+                    How to build a website?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionFAQ1"
+                >
+                  <div class="accordion-body">
+                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam
+                    sed sed magna et magna diam aliquyam amet dolore ipsum erat
+                    duo. Sit rebum magna duo labore no diam.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    How long will it take to get a new website?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionFAQ1"
+                >
+                  <div class="accordion-body">
+                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam
+                    sed sed magna et magna diam aliquyam amet dolore ipsum erat
+                    duo. Sit rebum magna duo labore no diam.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item wow fadeIn" data-wow-delay="0.3s">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Do you only create HTML websites?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionFAQ1"
+                >
+                  <div class="accordion-body">
+                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam
+                    sed sed magna et magna diam aliquyam amet dolore ipsum erat
+                    duo. Sit rebum magna duo labore no diam.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item wow fadeIn" data-wow-delay="0.4s">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="true"
+                    aria-controls="collapseFour"
+                  >
+                    Will my website be mobile-friendly?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionFAQ1"
+                >
+                  <div class="accordion-body">
+                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam
+                    sed sed magna et magna diam aliquyam amet dolore ipsum erat
+                    duo. Sit rebum magna duo labore no diam.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="accordion" id="accordionFAQ2">
+              <div class="accordion-item wow fadeIn" data-wow-delay="0.5s">
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    Will you maintain my site for me?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFive"
+                  data-bs-parent="#accordionFAQ2"
+                >
+                  <div class="accordion-body">
+                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam
+                    sed sed magna et magna diam aliquyam amet dolore ipsum erat
+                    duo. Sit rebum magna duo labore no diam.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item wow fadeIn" data-wow-delay="0.6s">
+                <h2 class="accordion-header" id="headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
+                    I’m on a strict budget. Do you have any low cost options?
+                  </button>
+                </h2>
+                <div
+                  id="collapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSix"
+                  data-bs-parent="#accordionFAQ2"
+                >
+                  <div class="accordion-body">
+                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam
+                    sed sed magna et magna diam aliquyam amet dolore ipsum erat
+                    duo. Sit rebum magna duo labore no diam.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item wow fadeIn" data-wow-delay="0.7s">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven"
+                    aria-expanded="false"
+                    aria-controls="collapseSeven"
+                  >
+                    Will you maintain my site for me?
+                  </button>
+                </h2>
+                <div
+                  id="collapseSeven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSeven"
+                  data-bs-parent="#accordionFAQ2"
+                >
+                  <div class="accordion-body">
+                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam
+                    sed sed magna et magna diam aliquyam amet dolore ipsum erat
+                    duo. Sit rebum magna duo labore no diam.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item wow fadeIn" data-wow-delay="0.8s">
+                <h2 class="accordion-header" id="headingEight">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseEight"
+                    aria-expanded="false"
+                    aria-controls="collapseEight"
+                  >
+                    I’m on a strict budget. Do you have any low cost options?
+                  </button>
+                </h2>
+                <div
+                  id="collapseEight"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingEight"
+                  data-bs-parent="#accordionFAQ2"
+                >
+                  <div class="accordion-body">
+                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam
+                    sed sed magna et magna diam aliquyam amet dolore ipsum erat
+                    duo. Sit rebum magna duo labore no diam.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- FAQs Start -->
 
-
     <!-- Newsletter Start -->
     <div class="container-fluid bg-primary newsletter py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
-                    <img class="img-fluid" src="img/newsletter.png" alt="">
-                </div>
-                <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Newsletter</div>
-                    <h1 class="text-white mb-4">Let's subscribe the newsletter</h1>
-                    <div class="position-relative w-100 mt-3 mb-2">
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                            placeholder="Enter Your Email" style="height: 48px;">
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                class="fa fa-paper-plane text-primary fs-4"></i></button>
-                    </div>
-                    <small class="text-white-50">Diam sed sed dolor stet amet eirmod</small>
-                </div>
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div
+            class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn"
+            data-wow-delay="0.3s"
+          >
+            <img class="img-fluid" src="img/newsletter.png" alt="" />
+          </div>
+          <div
+            class="col-md-7 py-5 newsletter-text wow fadeIn"
+            data-wow-delay="0.5s"
+          >
+            <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">
+              Newsletter
             </div>
+            <h1 class="text-white mb-4">Let's subscribe the newsletter</h1>
+            <div class="position-relative w-100 mt-3 mb-2">
+              <input
+                class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                type="text"
+                placeholder="Enter Your Email"
+                style="height: 48px"
+              />
+              <button
+                type="button"
+                class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
+              >
+                <i class="fa fa-paper-plane text-primary fs-4"></i>
+              </button>
+            </div>
+            <small class="text-white-50"
+              >Diam sed sed dolor stet amet eirmod</small
+            >
+          </div>
         </div>
+      </div>
     </div>
     <!-- Newsletter End -->
 
-
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-white">AI<span class="text-primary">.</span>Tech</h1>
-                    </a>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor</p>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="text-white mb-4">Popular Link</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Career</a>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <h5 class="text-white mb-4">Our Services</h5>
-                    <a class="btn btn-link" href="">Robotic Automation</a>
-                    <a class="btn btn-link" href="">Machine learning</a>
-                    <a class="btn btn-link" href="">Predictive Analysis</a>
-                    <a class="btn btn-link" href="">Data Science</a>
-                    <a class="btn btn-link" href="">Robot Technology</a>
-                </div>
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="d-inline-block mb-3">
+              <h1 class="text-white">
+                AI<span class="text-primary">.</span>Tech
+              </h1>
+            </a>
+            <p class="mb-0">
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor
+              sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem
+              et sit, sed stet no labore lorem sit. Sanctus clita duo justo et
+              tempor
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+            <h5 class="text-white mb-4">Get In Touch</h5>
+            <p>
+              <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
+            </p>
+            <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+            <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+            <h5 class="text-white mb-4">Popular Link</h5>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Privacy Policy</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">Career</a>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+            <h5 class="text-white mb-4">Our Services</h5>
+            <a class="btn btn-link" href="">Robotic Automation</a>
+            <a class="btn btn-link" href="">Machine learning</a>
+            <a class="btn btn-link" href="">Predictive Analysis</a>
+            <a class="btn btn-link" href="">Data Science</a>
+            <a class="btn btn-link" href="">Robot Technology</a>
+          </div>
         </div>
-        <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+      </div>
+      <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
+              Right Reserved.
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FAQs</a>
-                        </div>
-                    </div>
-                </div>
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              Designed By
+              <a class="border-bottom" href="https://htmlcodex.com"
+                >HTML Codex</a
+              >
+              Distributed By
+              <a class="border-bottom" href="https://themewagon.com"
+                >ThemeWagon</a
+              >
             </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="footer-menu">
+                <a href="">Home</a>
+                <a href="">Cookies</a>
+                <a href="">Help</a>
+                <a href="">FAQs</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -681,6 +1037,5 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
