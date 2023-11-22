@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>ChatGPT Prompt Engineering</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NZWWWM7V');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5DE1JRVTF"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V5DE1JRVTF');
+  </script>
+  <!-- End Google Analytics -->
+
+  <meta name="keywords" content="prompting, ai artificial intelligence, ai consciousness, prompt examples, prompt engineer">
+  <meta name="description" content="This ChatGPT prompt generation tool is designed to assist in prompt engineering, this tool allows users to effortlessly configure the prompt for ChatGPT.">
+                             
+   <!-- OpenGraph -->
+   <meta property="og:title" content="PromptEase: Where AI Gets Easy">
+   <meta property="og:description" content="This ChatGPT prompt generation tool is designed to assist in prompt engineering, this tool allows users to effortlessly configure the prompt for ChatGPT.">
+   <meta property="og:image" content="img/facebook-image.webp">
+   <meta property="og:url" content="https://promptease.ar/chatgpt.html">
+   <meta property="og:type" content="website">
+   <meta property="og:site_name" content="PromptEase">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="PromptEase: Where AI Gets Easy">
+   <meta name="twitter:description" content="This ChatGPT prompt generation tool is designed to assist in prompt engineering, this tool allows users to effortlessly configure the prompt for ChatGPT.">
+   <meta name="twitter:image" content="img/facebook-image.webp">
+   
+   <!-- End OpenGraph -->
+
+  <link rel="canonical" href="https://promptease.ar/chatgpt.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+      rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- ChatGPT Stylesheet -->
+  <link href="/css/styles-chatgpt.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZWWWM7V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!--End Google Tag Manager (noscript) -->
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+   <!-- Navbar Start -->
+   <div class="container-fluid sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/promptease-w-logo.webp" alt="PromptEase" class="logo">
+            </a>
+            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Prompt Generators</a>
+                        <div class="dropdown-menu bg-light mt-2">
+                            <a href="chatgpt.html" class="dropdown-item active">ChatGPT</a>
+                        </div>
+                    </div>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
+                </div>
+                <!-- <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                    data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> (search logo)-->
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 bg-primary hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">ChatGPT Prompting</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Prompt Generators</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">ChatGPT</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="img/hero-img.webp" alt="Prompt Engineer" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Full Screen Search Start -->
+    <!-- <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Full Screen Search End -->
+
+
+    <!-- ChatGPT Prompt Start -->
+    <div id="promptChatGPT">
+        <div class="header-container">
+          <h1 id="tittleGpt">Prompt Generator</h1>
+        </div>
+          <p class="chatgpt">
+              This ChatGPT prompt generation tool is designed to assist in prompt
+              engineering, this platform allows users to effortlessly configure the 
+              model's parameters for ChatGPT.<br><br>
+              <strong>How to start:</strong> <br><br>
+              1. Define the type of Prompt you need, there are 2 types:<br> 
+              &nbsp&nbsp&nbsp A. Direct Prompt: The user only writes an input with his query.<br>
+              &nbsp&nbsp&nbsp B. Contextual Prompt: It carries context information that the model first need, and then an input with instructions.<br>
+              2. Select the task you want to use as model.<br>
+              3. Add de the General Context if necessary.<br>
+              4. Add the input of the query you are going to generate.<br>
+              3. Define variables and parameters/hiperparameter you want to use.<br>
+              5. Generate the prompt and copy it to your ChatGPT account.<br><br>
+              IMPORTANT: We do not view or store any of your inputs information or
+              your selections, experiment and use it freely !
+          </p>
+        <div id="twoColumn">
+          <div id="variables">
+            <label><h6>Variables</h6></label>
+            <button id="variableButton" class="toggleButton" onclick="moreInfo(this)">
+              + Definition
+            </button>
+            <div class="textDefinition" style="display: none">
+              <p>
+                Variables are used to reserve memory spaces in a concise {manner},
+                holding the information we intend to utilize in our output prompt
+                or as a reference. It's possible to define multiple variables.<br />
+                For instance:<br />
+                Variable Name: RS (keep it short)<br />
+                Variable Value: Rising Sun<br />
+                Input: Compose a poem about {RS} where it is mentioned exactly 10
+                times.<br />
+                You can add as many variables as you want, but the model could
+                hallucinate.
+              </p>
+            </div>
+            <div id="variableContainer">
+              <div id="variableNameCont">
+                <label>Variable Name:</label>
+                <input
+                  type="text"
+                  class="variableName"
+                  placeholder="Insert a name"
+                  id="variableName_0"
+                />
+              </div>
+              <div id="variableValueCont">
+                <label>Variable Value:</label>
+                <input
+                  type="text"
+                  class="variableValue"
+                  placeholder="Insert a value"
+                  id="variableValue_0"
+                />
+              </div>
+              <div id="deleteVariables">
+                  <label>I/D:</label>
+                  <button
+                      type="button"
+                      class="deleteButton"
+                      id="deleteButton"
+                      onclick="agregarElemento()"
+                  >
+                      +
+                  </button>
+              </div>
+            </div>
+            <div id="taskContainer">
+              <label class="labelWithPopup" for="taskOption">Task:</label>
+              <div class="popupHidden">
+                <h6 class="popBox">Task</h6>
+                <span class="popText">
+                  We have defined some tasks that you can use as a model and
+                  replace the data with your own data, experiment!
+                </span>
+              </div>
+              <select id="taskOption"></select>
+            </div>
+            <div id="contextContainer">
+               <label class="labelWithPopup" for="contextOption">General Context:</label>
+               <div class="popupHidden">
+                <h6 class="popBox">General Context</h6>
+                <span class="popText">
+                  The context is very IMPORTANT for an accurate answer, here you enter relevant 
+                  information that the model must take into account to solve the query.
+                </span>
+              </div>
+             <select id="contextOption">
+               <option value="notused">Not-Used</option>
+               <option value="context">Context</option>
+               <option value="text">Text</option>
+               <option value="problem">Problem</option>
+               <option value="example">Example</option>
+               <option value="reviews">Reviews</option>
+               <option value="information">Information</option>
+             </select>
+            </div>
+            <button class="toggleButton" onclick="moreInfo(this)">
+              + Definition
+            </button>
+            <div class="textDefinition" style="display: none">
+              <p>
+                The general context provides the model with the initial information to
+                start its task or to know the purpose and scope of what we are
+                going to ask for in the input, is not always necessary.<br />
+                You can look in Task the expamples with type of general contex
+                you can adapt and modify them to your needs..
+              </p>
+            </div>
+            <textarea
+              id="context"
+              placeholder="Describe the context or enter information for ChatGPT better picture"
+              ></textarea>
+            <div id="charWordCountContext">0 chars / 0 words / 0 est. tokens</div>
+            <div class="dropdownAdd">
+              <button class="buttonGreen" onclick="agregarElementos('context')">
+                Add Variables
+              </button>
+              <ul
+                class="dropdown-content"
+                id="menuDesplegable"
+                tabindex="0"
+                onkeydown="navegarMenu(event)"
+              ></ul>
+            </div>
+            <label for="text">Input:</label>
+            <button class="toggleButton" onclick="moreInfo(this)">
+              + Definition
+            </button>
+            <div class="textDefinition" style="display: none">
+              <p>
+                It is the heart of the prompt, in this part we request the
+                specific and necessary task to ChatGPR.<br />
+                Example: To summarize text, in the input text we would write:
+                "Summarize the text separating the topics by titles and
+                highlighting the main concepts of the Text:"<br />(when using
+                context always refer to "the text" and end the imput with "Text:"
+                for a better interpretation of the model.)<br />
+                In the output of the prompt you will see some formats like: f,
+                """", etc. so that ChtaGPT interprets it better, we recommend not
+                to alter them.
+              </p>
+            </div>
+            <textarea
+              id="text"
+              placeholder="Enter your request for ChatGPT"
+            ></textarea>
+            <div id="charWordCountText">0 chars / 0 words / 0 est. tokens</div>
+            <div class="dropdownAdd">
+              <button class="buttonGreen" onclick="agregarElementos('text')">
+                Add Variables
+              </button>
+              <ul
+                class="dropdown-content"
+                id="menuDesplegableText"
+                tabindex="0"
+                onkeydown="navegarMenu(event)"
+              ></ul>
+            </div>
+          </div>
+          <div id="hiperparameter">
+            <label><h6>Hiperparameters/ Parameters:</h6></label>
+            <button class="toggleButton" onclick="moreInfo(this)">
+              + Definitions
+            </button>
+            <div class="textDefinition" style="display: none">
+              <p>
+                Hyperparameters are settings or configurations used to control the
+                training process itself, rather than the learned relationships
+                within the model. They are established before training and are not
+                learned from data (temperature, Top K, etc.).<br />
+                Parameters are the internal variables that the model learns during
+                training. They define the relationships between the input data and
+                the predicted output. These values are specific to the particular
+                dataset and task the model was trained on (Role, Tone, Etc.).
+              </p>
+            </div>
+            <div id="parametersContainer">
+              <div id="modelOption">
+                <label class="labelWithPopup" for="model">Model:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Model</h6>
+                  <span class="popText">
+                    Refer to different iterations or releases of the ChatGPT
+                    model. Each version is a specific variation or improvement of
+                    the model, typically distinguished by factors like training
+                    data, architecture, and performance capabilities.
+                  </span>
+                </div>
+                <select id="model">
+                  <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+                  <option value="text-babbage-001">text-babbage-001</option>
+                  <option value="text-ada-001">text-ada-001</option>
+                  <option value="gpt-3.5-turbo-0301">gpt-3.5-turbo-0301</option>
+                  <option value="davinci-002">davinci-002</option>
+                  <option value="gpt-3.5-turbo-0613">gpt-3.5-turbo-0613</option>
+                  <option value="text-curie-001">text-curie-001</option>
+                  <option value="code-cushman-001">code-cushman-001</option>
+                </select>
+              </div>
+              <div id="languageOption">
+                <label class="labelWithPopup" for="langOption">Language:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Language</h6>
+                  <span class="popText">
+                    Records indicate that ChatGPT can translate to more than 95
+                    languages. Just enter the imput and select the language, to
+                    indicate at the prompt which language ChatGPT should deliver
+                    the response.
+                  </span>
+                </div>
+                <select id="langOption"></select>
+              </div>
+              <div id="roleOption">
+                <label class="labelWithPopup" for="roleOpt">Role:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Role</h6>
+                  <span class="popText">
+                    LLMs are models that can be positioned in a certain role to
+                    deliver more accurate answers, such as Technology advisor or
+                    Copywriter. You will find many predefined ones to help you in
+                    your task, if you don't find it then you can edit it in your
+                    prompt. First understand the structure of how they work and
+                    create your own.
+                  </span>
+                </div>
+                <select id="roleOpt"></select>
+              </div>
+              <div id="writingStyle">
+                <label class="labelWithPopup" for="writingStyleOpt">Writing Style:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Writing Style</h6>
+                  <span class="popText">
+                    You can tell ChatGPT the style of writing you want in your
+                    response and it can be as varied as academic or thriller. Play
+                    with the styles and have fun.
+                  </span>
+                </div>
+                <select id="writingStyleOpt"></select>
+              </div>
+              <div id="toneOption">
+                <label class="labelWithPopup" for="toneOpt">Tone:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Tone</h6>
+                  <span class="popText">
+                    Define the tone of the response text that ChatGPT will give
+                    you. It can be as varied as: funny or sarcastic, play around
+                    with them, mixing different parameters.
+                  </span>
+                </div>
+                <select id="toneOpt"></select>
+              </div>
+              <div id="sentimentOption">
+                <label class="labelWithPopup" for="sentiment">Sentiment:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Sentiment</h6>
+                  <span class="popText">
+                    You can define the sentiment with which you want ChatGPT to
+                    write. This Hyperparameter can also be used in the Input, to
+                    analyze reviews, posts, emails, etc. Search in the Task option
+                    "Review Classification".
+                  </span>
+                </div>
+                <select id="sentiment">
+                  <option value="Default">Default</option>
+                  <option value="Neutral">Neutral</option>
+                  <option value="Positive">Positive</option>
+                  <option value="Negative">Negative</option>
+                </select>
+              </div>
+              <div id="formatOption">
+                <label class="labelWithPopup" for="formatOpt">Format:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Format</h6>
+                  <span class="popText">
+                    It is important that we define the output format in which we
+                    want ChatGPT to deliver the content, this can save us work and
+                    processing time. The model contemplates many formats, try
+                    them. By default it will deliver a format according to the
+                    interpretation it makes.
+                  </span>
+                </div>
+                <select id="formatOpt"></select>
+              </div>
+              <div id="audienceContainer">
+                <label class="labelWithPopup" for="audience">Audience:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Audience</h6>
+                  <span class="popText">
+                    One of the guidelines is to be specific, by defining the
+                    audience the model selects the mode, difficulty and language
+                    used in the response. Place your target audience for the
+                    model's response. Blank will use medium complexity and
+                    language.
+                  </span>
+                </div>
+                <textarea
+                  id="audience"
+                  placeholder="E.g.:5 years old children, engineering students, medical conference, etc"
+                ></textarea>
+              </div>
+              <div id="temperatureContainer">
+                <label class="labelWithPopup" for="temperature"
+                  >Temperature:&nbsp;<output id="temperatureOutput"></output
+                ></label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Temperature</h6>
+                  <span class="popText">
+                    Is like a knob that controls how random or focused the
+                    generated text is. High temperature (e.g., 0.8) makes the
+                    output more creative and unpredictable. Low temperature (e.g.,
+                    0.2) makes the output more focused and deterministic.
+                    Adjusting temperature helps strike a balance between
+                    creativity and sticking to a specific pattern.
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  id="temperature"
+                  min="0"
+                  max="2"
+                  step="0.1"
+                  value="0.0"
+                />
+              </div>
+              <div id="topPContainer">
+                <label class="labelWithPopup" for="topP"
+                  >Top P:&nbsp;<output id="topPOutput"></output
+                ></label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Top P</h6>
+                  <span class="popText">
+                    Narrows word choices based on probability, it limits the
+                    selection of words to the most probable ones. For example, if
+                    you set Top P to 0.8, the model will consider words that make
+                    up 80% of the total probability mass. Temperature adjusts how
+                    evenly distributed these probabilities are, influencing
+                    randomness. Both control text generation, but in different
+                    ways.
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  id="topP"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="0.00"
+                />
+              </div>
+              <div id="topKContainer">
+                <label class="labelWithPopup" for="topK">Top K:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Top k</h6>
+                  <span class="popText">
+                    Limits the number of options considered during text
+                    generation. It keeps only the K most probable words in the
+                    selection process. For instance, if K is 50, the model will
+                    only choose from the 50 most likely words. In contrast,
+                    temperature adjusts the overall randomness of the output. Top
+                    P, on the other hand, keeps adding likely words until the
+                    total probability reaches a certain threshold (e.g., 80%). So,
+                    Top K limits options by quantity, temperature controls overall
+                    randomness, and Top P does so based on cumulative probability.
+                  </span>
+                </div>
+                <input
+                  type="number"
+                  id="topK"
+                  placeholder="Top K"
+                  min="0"
+                  max="10000"
+                  step="1"
+                  value="0"
+                />
+              </div>
+              <div id="maxTokensContainer">
+                <label class="labelWithPopup" for="maxTokens">Max Tokens:</label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Max Tokens</h6>
+                  <span class="popText">
+                    Refers to the maximum number of tokens (1 word = 1.3 est.
+                    tokens, in English) that a language model can generate in a
+                    single response. It limits the total number of tokens in the
+                    combined input and output sequence. For example, if you set
+                    "max tokens" to 50, the model will generate a response that is
+                    up to 50 tokens in length, If the response exceeds this limit,
+                    it can be truncated or cut off accordingly.
+                  </span>
+                </div>
+                <input
+                  type="number"
+                  id="maxTokens"
+                  placeholder="Max Tokens"
+                  min="0"
+                  max="1000"
+                  step="1"
+                  value="0"
+                />
+              </div>
+              <div id="frequencyPenaltyContainer">
+                <label class="labelWithPopup" for="frequencyPenalty"
+                  >Frequency Penalty:&nbsp;<output
+                    id="frequencyPenaltyOutput"
+                  ></output
+                ></label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Frequency Penalty</h6>
+                  <span class="popText">
+                    Is a setting used to control how often the model repeats
+                    certain words or phrases. It discourages the model from using
+                    the same word or phrase repeatedly in a response. For example,
+                    if you set a positive Frequency Penalty encourage the model to
+                    avoid repeating the same words or phrases. If you set a
+                    negative Frequency Penalty, on the other hand, encourages
+                    repetition. It helps make the generated text more diverse and
+                    natural-sounding by reducing excessive repetition.
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  id="frequencyPenalty"
+                  min="-2"
+                  max="2"
+                  step="0.1"
+                  value="0.0"
+                />
+              </div>
+              <div id="presencePenaltyContainer">
+                <label class="labelWithPopup" for="presencePenalty"
+                  >Presence Penalty:&nbsp;<output
+                    id="presencePenaltyOutput"
+                  ></output
+                ></label>
+                <div class="popupHidden">
+                  <h6 class="popBox">Presence Penalty</h6>
+                  <span class="popText">
+                    Is a setting that influences how often the model includes
+                    words or entities in its generated text. A positive Presence
+                    Penalty encourages the model to reuse the words included in
+                    your prompt more frequently in the output. A negative Presence
+                    Penalty discourages the model from using them. For Example,
+                    Prompt: "Generate a story about an astronaut exploring a
+                    distant planet." {"presence_penalty": 0.8}. This will
+                    encourage the model to use the words astronaut, planet, or
+                    even story more often in the output.
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  id="presencePenalty"
+                  min="-2"
+                  max="2"
+                  step="0.1"
+                  value="0.0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="prompt">
+          <label><h6>Prompt Result</h6></label>
+          <button class="toggleButton" onclick="moreInfo(this)">
+            + Definition
+          </button>
+          <div class="textDefinition" style="display: none">
+            <p>
+              This is the result of the prompt generated from the input
+              information and the selected settings, this information is not
+              stored by us. We consider that this prompt is optimized and contains
+              all the prompt engineering techniques necessary for a good result,
+              but you can use the resulting information or edit it before using it
+              in ChatGPT. Consider that ChatGPT prompt supports approximately 16000 chars
+              in its input We hope you find it useful!
+            </p>
+          </div>
+          <br />
+          <button id="generate" class="buttonGreen">Generate Prompt</button>
+          <button id="deletePrompt">Delete Prompt</button>
+          <div id="output"></div>
+          <div id="charWordCount"></div>
+          <button id="copy" class="buttonGreen" disabled>Copy Prompt</button
+          ><br /> <br><br>
+        </div>
+      </div>
+
+    <!-- ChatGPT  End -->
+
+    <!-- Newsletter Start -->
+   <!--  <div class="container-fluid bg-primary newsletter py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
+                    <img class="img-fluid" src="img/newsletter.png" alt="">
+                </div>
+                <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Newsletter</div>
+                    <h1 class="text-white mb-4">Let's subscribe the newsletter</h1>
+                    <div class="position-relative w-100 mt-3 mb-2">
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                            placeholder="Enter Your Email" style="height: 48px;">
+                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </div>
+                    <small class="text-white-50">Diam sed sed dolor stet amet eirmod</small>
+                </div>
+            </div>
+        </div>
+    </div>   -->
+    <!-- Newsletter End -->
+
+
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-white-50 footer pt-5">
+      <div class="container py-5">
+          <div class="row g-5">
+              <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                  <a href="index.html" class="d-inline-block mb-3">
+                      <img src="img/promptease-logo-full.webp" alt="PromptEase" class="logo">
+                  </a>
+                  <p class="mb-0">Feel free to contact me if you have any query, or wish to collaborate with this project
+                    in any of the topics of interest.</p>
+              </div>
+              <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                  <h5 class="text-white mb-4">Get In Touch</h5>
+                  <p><i class="fa fa-map-marker-alt me-3"></i>World Wide</p>
+                  <p><i class="fa fa-envelope me-3"></i>contact@promptease.ar</p>
+                  <div class="d-flex pt-2">
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                  <h5 class="text-white mb-4">Topics of Interest</h5>
+                  <a class="btn btn-link" href="">Machine learning</a>
+                  <a class="btn btn-link" href="">Prompt Engineering</a>
+                  <a class="btn btn-link" href="">Data Science</a>
+                  <a class="btn btn-link" href="">Finne-Tunning</a>
+                  <a class="btn btn-link" href="">Open Source LLMs</a>
+              </div>
+          </div>
+      </div>
+      <div class="container wow fadeIn" data-wow-delay="0.1s">
+          <div class="copyright">
+              <div class="row">
+                  <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                      &copy; <a class="border-bottom" href="#">PromptEase.ar</a>, All Right Reserved.
+
+                      <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                      Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <!-- ChatGPT Javascript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -23,11 +23,14 @@ const audienceText = document.getElementById("audience");
 const formatOpt = document.getElementById("formatOpt");
 const textAreaText = document.getElementById("text");
 const textAreaContext = document.getElementById("context");
+const contextOpt = document.getElementById("contextOption");
 const variableNames = document.getElementsByClassName("variableName");
 const variableValues = document.getElementsByClassName("variableValue");
 const taskValues = document.getElementById("taskOption");
 const charWordCountText = document.getElementById("charWordCountText");
 const charWordCountContext = document.getElementById("charWordCountContext");
+
+
 
 //Genera el prompt a partir de los datos
 generateButton.addEventListener("click", () => {
@@ -47,6 +50,7 @@ generateButton.addEventListener("click", () => {
   const presence_penalty = presPenaltySlider.value;
   const audience = audienceText.value;
   const format = formatOpt.value;
+  const contOpt = contextOpt.value;
 
   let tokens;
 
@@ -88,18 +92,28 @@ generateButton.addEventListener("click", () => {
     }
   }
 
-  if (context) {
-    prompt += `\nContext = f"""${context}"""\n\n`;
+  if (contOpt !== "notused") {
+    prompt += `${contOpt} = """${context}"""\n\n`;
   }
-  
+
   if (role !== "Default") {
     prompt += `${role}\n`;
   }
 
-  if (text !== "" && context === "") {
-    prompt += `prompt = f"""${text}"""\n`;
-  } else if (context !== "") {
-    prompt += `prompt = f"""${text}\n\`\`\`{context}\`\`\`"""\n`;
+  if (text !== "") {
+    prompt += `${text}\n`;
+  }
+
+  if (contOpt === "context") {
+    prompt += `Considering the following:\n\`\`\`{${contOpt}}\`\`\`\n`;
+  } else if (contOpt === "text" || contOpt === "problem" || contOpt === "reviews") {
+    prompt += `For the following:\n\`\`\`{${contOpt}}\`\`\`\n`;
+  } else if (contOpt === "example") {
+    prompt += `As in the following:\n\`\`\`{${contOpt}}\`\`\`\n`; 
+  } else if (contOpt === "context") {
+    prompt += `Consider the following:\n\`\`\`{${contOpt}}\`\`\`\n`;
+  } else if (contOpt === "information") {
+    prompt += `Take the following:\n\`\`\`{${contOpt}}\`\`\`\n`;
   }
   
   if (model !== "gpt-3.5-turbo") {
@@ -111,7 +125,7 @@ generateButton.addEventListener("click", () => {
   }
 
   if (writingStyle !== "Default") {
-    prompt += `{"writing style": "${writingStyle}"}, `;
+    prompt += `{"writing_style": "${writingStyle}"}, `;
   }
 
   if (tone !== "Default") {
@@ -123,7 +137,7 @@ generateButton.addEventListener("click", () => {
   }
 
   if (format !== "Default") {
-    prompt += `{"format": "${format}"}, `;
+    prompt += `{"output_format": "${format}"}, `;
   }
 
   if (audience) {
@@ -177,6 +191,7 @@ generateButton.addEventListener("click", () => {
   charWordCount.textContent = `${charCount} chars / ${wordCount} words / ${tokens} est. tokens`;
 });
 
+
 //actualiza los contadores de context y text
 textAreaText.addEventListener("input", updateCounters);
 textAreaContext.addEventListener("input", updateCounters);
@@ -209,7 +224,35 @@ function updateCounters() {
   charWordCountContext.textContent = `${charCountContext} chars / ${wordCountContext} words / ${tokensContext} est. tokens`;
 }
 
+textAreaText.addEventListener("change", function() {
+  updateCounters();
+});
 
+textAreaContext.addEventListener("change", function() {
+  updateCounters();
+});
+
+//Ante algun evento se dispara la funcion y cambia el contexto
+function enableContextSelect() {
+  var selectElement = document.getElementById("contextOption");
+  var textareaElement = document.getElementById("context");
+
+  if (selectElement.value === "notused") {
+    textareaElement.disabled = true;
+    textareaElement.value = ""; // Borra el contenido del textarea
+  } else {
+    textareaElement.disabled = false;
+  }
+  updateCounters();
+}
+//escucha al cambio del task que se dispara mas abajo
+document.addEventListener("DOMContentLoaded", enableContextSelect);
+
+var contextOptionElement = document.getElementById("contextOption");
+//Escucha al cambio
+contextOptionElement.addEventListener("change", function() {
+  enableContextSelect();
+});
 
 // Boton que borra el Prompt
 deletePromptButton.addEventListener("click", () => {
@@ -441,6 +484,7 @@ fetch("assets/json/tasks.json")
 
   if (selectedItem) {
     // Copiar los datos en los campos correspondientes
+    document.getElementById("contextOption").value = selectedItem.context_option;
     document.getElementById("context").value = selectedItem.context;
     document.getElementById("text").value = selectedItem.input;
     document.getElementById("model").value = selectedItem.model;
@@ -459,6 +503,9 @@ fetch("assets/json/tasks.json")
     document.getElementById("presencePenalty").value = selectedItem.presence_penalty;
     document.getElementById("variableName_0").value = selectedItem.valname;
     document.getElementById("variableValue_0").value = selectedItem.valvalue;
+
+    enableContextSelect();
+    updateCounters();
   }
 });
 })
@@ -568,7 +615,7 @@ document.addEventListener('touchstart', function (event) {
   }
   
   label.addEventListener('click', toggleHidden);
-  label.addEventListener('touchstart', toggleHidden);
+  label.addEventListener('touchstart', toggleHidden, {passive: false});
   label.addEventListener('mouseover', function () {
   this.nextElementSibling.classList.remove('hidden');
   });

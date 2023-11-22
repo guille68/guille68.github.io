@@ -1,0 +1,454 @@
+#promptChatGPT {
+  margin: 25px;
+}
+
+h1 {
+  text-align: center;
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select, input, textarea, button {
+  border-radius: 10px;
+}
+
+input[type='text']  {
+  height: 30px;
+  border-width: 1px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Añade esta línea para centrar horizontalmente */
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#deleteButton {
+  height: 30px;
+  border-width: 1px;
+  background-color: #4ECCC5;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+[id^='deleteButton_'] {
+  height: 30px;
+  border-width: 1px;
+  background-color: #d90429;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+#context, #text {
+  height: 120px;
+  box-sizing: border-box;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+#copy {
+  margin-top: 25px;
+}
+
+#deleteVariables {
+  margin-left: 10px;
+  display: block;
+}
+
+.deleteButton {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+#output {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  white-space: pre-wrap;
+  border-radius: 10px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+textarea {
+  display: block;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px;
+  resize: vertical;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#variableContainer {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#variableValueCont {
+  margin-left: 10px;
+}
+
+.variableValue {
+  width: 29vw;
+}
+
+.variableName {
+  width: 112px;
+}
+
+#parametersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#temperatureContainer, #topPContainer, #frequencyPenaltyContainer, #presencePenaltyContainer {
+  align-items: center;
+  margin-left: 10px;
+  flex-wrap: wrap;
+}
+
+#topKContainer, #maxTokensContainer {
+  display: flex;
+  margin-left: 10px;
+}
+
+#topKContainer {
+  margin-right: 70px;
+}
+
+#topK, #maxTokens {
+  margin-left: 10px;
+  margin-top:10px;
+  height: 25px;
+  border-width: 1px;
+  width: 10vw;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+#modelOption, #languageOption, #roleOption, #writingStyle, #toneOption, #sentimentOption, #audienceContainer, #formatOption, #taskContainer, #contextContainer {
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+#model, #langOption, #roleOpt, #writingStyleOpt, #toneOpt, #sentiment, #audience, #formatOpt, #taskOption, #contextOption {
+  margin-left: 5px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  width: 35vw; /* Esto hará que el ancho sea el 100% del contenedor padre */
+}
+
+input[type="range"] {
+  width: 44vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
+  /* Aquí puedes añadir más estilos específicos para los input de tipo "range" */
+}
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #4eccc5;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 3.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -8px; /* Centers thumb on the track */
+  background-color: #908989;
+  border-radius: 0.5rem;
+  height: 1.5rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #908989;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #4eccc5;
+  border-radius: 3.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #908989;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1.5rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #908989;
+  outline-offset: 0.125rem;
+}
+
+#deletePrompt {
+    position: relative;
+    left: 44%;
+    transform: translateX(-55%);
+    margin-top: 10px;
+}
+
+.toggleButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+@media (hover: hover){
+    
+.toggleButton:hover {
+  color: #4ECCC5; /* Cambia el color al pasar el mouse por encima o al tocar en dispositivos móviles */
+}
+}
+
+.textDefinition {
+  margin-top: -20px;
+}
+
+/*Estilos para botones de Add Variables*/
+.seleccionado {
+  background-color: #ccc;
+}
+
+.dropdownAdd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dropdown-content {
+  display: none;
+  list-style-type: none;
+  margin-top: 40px;
+  overflow: hidden;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  max-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  margin-left: -32px;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+
+.dropdownAdd:hover .dropdown-content {
+  display: block;
+}
+
+#twoColumn{
+  column-count:2;
+  column-gap: 20px;
+}
+
+#hiperparameter {
+  break-inside: avoid-column;
+  display: inline-block;
+}
+
+#variables {
+  break-inside: avoid-column;
+}
+
+/*CSS de popups */
+
+.popupHidden {
+  position: absolute;
+  margin-top: 40px;
+  min-width: 120px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 8px 16px!important;
+  z-index: 9999;
+  max-width: 40%;
+}
+
+.popBox {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.popText {
+  display: block;
+  margin-top: 5px;
+  font-weight: 400!important;
+  font-size: 12px!important;
+  line-height: 20px!important;
+  text-align: left!important
+}
+
+
+.buttonGreen {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #4ECCC5;
+  z-index: 1;
+}
+
+.buttonGreen:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.buttonGreen:after {
+  border-radius: 10px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+  background-color: #76d7d2;
+  right: 0;
+}
+
+.buttonGreen:active {
+  top: 2px;
+}
+
+.buttonGreen[disabled] {
+  filter: grayscale(100%);
+}
+
+
+#deletePrompt {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #d90429;
+  z-index: 1;
+}
+
+#deletePrompt:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#deletePrompt:after {
+  border-radius: 10px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+  background-color: #ef233c;
+  right: 0;
+}
+
+#deletePrompt:active {
+  top: 2px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }  
+  #twoColumn {
+    column-count: 1; /* Cambiar a una sola columna en pantallas más pequeñas */
+  }
+  input[type="range"] {
+    width: 80vw; /* Esto hará que el elemento ocupe el ancho completo de su contenedor */
+    /* Aquí puedes añadir más estilos específicos para los input de tipo "range" */
+  }
+  #model, #langOption, #roleOpt, #writingStyleOpt, #toneOpt, #sentiment, #audience, #formatOpt, #taskOption, #contextOption {
+    width: 58vw; /* Esto hará que el ancho sea el 70% del contenedor padre */
+  }
+  #topK, #maxTokens {
+    width: 40vw;
+  }
+  .buttonGreen {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  #deletePrompt {
+    min-width: auto;
+    margin-bottom: 10px; /* Adjust as needed */
+    left: 44%;
+    transform: translateX(-75%);
+    min-width: auto;
+  }
+  select option {
+    max-width: 10px!important;
+    font-size: 4vw;
+}
+}
